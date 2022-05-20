@@ -39,7 +39,6 @@ const run = async () => {
                 case OPTIONS.GENERATE_DOC:
                     break;
                 default:
-                    console.log(chalk.red('select an valid option'));
                     process.exit(-1);
                     break;
             }
