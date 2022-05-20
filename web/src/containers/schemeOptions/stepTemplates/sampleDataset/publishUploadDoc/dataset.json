@@ -1,0 +1,33 @@
+{
+    "result": true,
+    "message": "Data successfully fetched",
+    "content": {
+        "workflowId": "uploadPublish",
+        "updatedAt": "12/8/2021, 9:54:06 AM",
+        "stepId": "step3",
+        "datasetVersion": 1,
+        "primaryKey": "1a3956e0-580c-11ec-90fb-e7814367c797-uploadPublish-step3",
+        "entityId": "1a3956e0-580c-11ec-90fb-e7814367c797",
+        "createdAt": "12/8/2021, 9:54:06 AM",
+        "data": {
+            "signatories": {},
+            "createdAt": "12/8/2021, 9:54:06 AM",
+            "documents": {
+                "FMA": {
+                    "path": "uploads/entity/1a3956e0-580c-11ec-90fb-e7814367c797/uploadPublish/step1/8790d330-580c-11ec-af2a-b7a609fb0e4a/FMA",
+                    "isContinue": false,
+                    "title": "FMA Document"
+                }
+            },
+            "datasetStatus": "P",
+            "commentId": null,
+            "approvers": {},
+            "datasetId": "c8123110-580c-11ec-a87f-9337bb5543e2",
+            "formData": {},
+            "userPool": {},
+            "updatedAt": "12/8/2021, 9:54:06 AM",
+            "stepId": "step3",
+            "datasetVersion": 1
+        }
+    }
+}

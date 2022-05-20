@@ -1,0 +1,14 @@
+[
+    {
+        "title_admin": "Investment management agreement (Client)",
+        "title_client": "Investment management agreement",
+        "doc_name": "FMA",
+        "role": "client"
+    },
+    {
+        "title_admin": "Accepted by LGIM",
+        "title_client": "",
+        "doc_name": "FMA",
+        "role": "clientTeam"
+    }
+]

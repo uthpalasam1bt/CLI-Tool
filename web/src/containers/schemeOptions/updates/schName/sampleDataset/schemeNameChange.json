@@ -1,0 +1,200 @@
+{
+    "result": true,
+    "message": "Data successfully fetched",
+    "content": {
+        "schemeId": "766ff6f0-4149-11ec-be93-8155e9a3aa06",
+        "workflows": [
+            {
+                "workflowKey": "schName",
+                "title": "Update schema name",
+                "version": 1,
+                "enabledRoles": ["client", "admin"],
+                "steps": [
+                    {
+                        "stepKey": "chngSchName",
+                        "sort": 1,
+                        "title": "Input scheme name",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "visible": true
+                    },
+                    {
+                        "stepKey": "dwnldSchDetl",
+                        "sort": 2,
+                        "title": "Review scheme details (LGIM)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "genrtDocs",
+                        "sort": 3,
+                        "title": "Generate documents (LGIM)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "aprvIaa",
+                        "sort": 4,
+                        "title": "Approve IAA (LGIM)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "aprvFma",
+                        "sort": 5,
+                        "title": "Approve FMA (LGIM)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "aprvPmc",
+                        "sort": 6,
+                        "title": "Approve PMC Policy (LGIM)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "aprvSip",
+                        "sort": 7,
+                        "title": "Approve SIP (LGIM)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "publDocs",
+                        "sort": 8,
+                        "title": "Publish documents (LGIM)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "schAprvIaa",
+                        "sort": 9,
+                        "title": "Review Investment Advisory Agreement",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "schAprvFma",
+                        "sort": 10,
+                        "title": "Review Investment Management Agreement",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "schAprvPmc",
+                        "sort": 11,
+                        "title": "Review Policy Terms",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "schAprvSip",
+                        "sort": 12,
+                        "title": "Review Statement of Investment Principles",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "spnsrConsltLtr",
+                        "sort": 13,
+                        "title": "Confirm sponsor consultation",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "lgimDocsExcuStat",
+                        "sort": 14,
+                        "title": "Sign legal documents",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "actMendt",
+                        "sort": 15,
+                        "title": "Activate mandate (LGIM)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true
+                    }
+                ],
+                "enabled": true,
+                "disabled": false,
+                "visible": true,
+                "active": true,
+                "isPortFolioEnable": false,
+                "isAbortEnable": false,
+                "currentPosition": "step1",
+                "sort": 3
+            }
+        ]
+    }
+}

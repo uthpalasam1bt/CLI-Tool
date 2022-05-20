@@ -1,0 +1,13 @@
+{
+    "selectDeficitContibutionFunding": {
+        "fundingOptions": {
+            "defaultValue": "-- Please select --",
+            "dataList": [
+                { "value": "Upload file", "key": "uploadDeficitContibutions" },
+                { "value": "On screen", "key": "enterOnscreen" }
+            ]
+        },
+        "name": "selectDeficitContibutionFunding",
+        "title": "Do you want to upload file of deficit contributions or enter on screen?"
+    }
+}

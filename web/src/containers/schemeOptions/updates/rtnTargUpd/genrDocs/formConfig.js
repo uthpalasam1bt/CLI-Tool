@@ -1,0 +1,106 @@
+/* 
+This is a functional configuration for creating a form which contains upload generate fields.
+Developers can pass this configuration to the tabs configuration  as a formFieldFunction property 
+
+*/
+import _ from 'lodash';
+import { required } from 'redux-form-validators'; // required validator
+import { UPLOAD_FILE_TYPES } from '../../../../../UILibrary/constants/fileUploaderConstants';
+import { DOC_NAMES } from './constants';
+import { documentGenConstant } from '../../../../../config/constants';
+import {STATUS_DOCUMENT_UPLOAD_PROCESSED} from "../../../../workflows/constants/workflowConstant";
+const { PDF, DOC } = UPLOAD_FILE_TYPES; // document types allowed to upload
+
+export const formFields = props => {
+    const FMAdocumentStatus = _.get(props, 'data.documents.FMA.documentStatus', null);
+    const AdvisoryReportdocumentStatus = _.get(props, 'data.documents.AdvisoryReport.documentStatus', null);
+    const SIPdocumentStatus = _.get(props, 'data.documents.SIP.documentStatus', null);
+    const ConsultationSponsorDocumentStatus = _.get(props, 'data.documents.ConsultationSponsor.documentStatus', null);
+
+    return [
+        {
+            label: 'Upload/Generate advisory report', //label to display in the form
+            field: {
+                name: DOC_NAMES.AdvisoryReport, // a name to the  field
+                options: {
+                    accept: [PDF], // can specify what are the types of document  that the  user allowed to upload
+                    isPublic: false // specifyingto upload the document to the public bucket or the private bucket
+                },
+                // validate: [required({ message: 'Required' })], // validate the field to be required
+                disabled: AdvisoryReportdocumentStatus === STATUS_DOCUMENT_UPLOAD_PROCESSED, // boolean value to disable the field and not allowing to upload a document
+                generate: true, // boolean value to enable the generate option
+                isMultiple: false, // to determine whether the user can upload a single document or multiple documents
+                generateoptions: {
+                    // ***at the moment file generation not working***
+                    // contains the configuration for generate document
+                    step: _.get(props, 'stepKey', null),
+                    flowKey: props.workflowKey,
+                    tenant: documentGenConstant.TENENT,
+                    schemeId: _.get(props, 'entityId', null),
+                    docName: documentGenConstant.ADVISORY,
+                    disabled: false,  //TODO FIX THIS
+                    templateKey: documentGenConstant.ADVISORY,
+                    userId: _.get(props, `loggedUser.${'custom:userId'}`, null),
+                    signatories: _.get(props, 'dataset.signatories', {})
+                },
+                validationModules: [{ moduleName: 'RequiredValidate', options: { message: 'Required' } }]
+            }
+        },
+        {
+            label: 'Upload/Generate IMA', //a label to display in the form
+            field: {
+                name: DOC_NAMES.FMA, // a name to the  field
+                options: {
+                    accept: [PDF], // can specify what are the types of document  that the  user allowed to upload
+                    isPublic: false // specifyingto upload the document to the public bucket or the private bucket
+                },
+                // validate: [required({ message: 'Required' })], // validate the field to be required
+                disabled: FMAdocumentStatus === STATUS_DOCUMENT_UPLOAD_PROCESSED, // boolean value to disable the field and not allowing to upload a document
+                generate: true, // boolean value to enable the generate option
+                isMultiple: false, // to determine whether the user can upload a single document or multiple documents
+                generateoptions: {
+                    // ***at the moment file generation not working***
+                    // contains the configuration for generate document
+                    step: _.get(props, 'stepKey', null),
+                    flowKey: props.workflowKey,
+                    tenant: documentGenConstant.TENENT,
+                    schemeId: _.get(props, 'entityId', null),
+                    docName: documentGenConstant.IMA,
+                    disabled: false,  //TODO FIX THIS
+                    templateKey: documentGenConstant.FMA,
+                    userId: _.get(props, `loggedUser.${'custom:userId'}`, null),
+                    signatories: _.get(props, 'dataset.signatories', {})
+                },
+                validationModules: [{ moduleName: 'RequiredValidate', options: { message: 'Required' } }]
+            }
+        },
+        {
+            label: 'Upload/Generate SIP', //a label to display in the form
+            field: {
+                name: DOC_NAMES.SIP, // a name to the  field
+                options: {
+                    accept: [PDF], // can specify what are the types of document  that the  user allowed to upload
+                    isPublic: false // specifyingto upload the document to the public bucket or the private bucket
+                },
+                validationModules: [{ moduleName: 'RequiredValidate', options: { message: 'Required' } }],
+                disabled: SIPdocumentStatus === STATUS_DOCUMENT_UPLOAD_PROCESSED, // boolean value to disable the field and not allowing to upload a document
+                generate: true, // boolean value to enable the generate option
+                isMultiple: false, // to determine whether the user can upload a single document or multiple documents
+            }
+        },
+        {
+            label: 'Upload/Generate sponsor consultation letter', //a label to display in the form
+            field: {
+                name: DOC_NAMES.ConsultationSponsor, // a name to the  field
+                options: {
+                    accept: [PDF, DOC], // can specify what are the types of document  that the  user allowed to upload
+                    isPublic: false // specifyingto upload the document to the public bucket or the private bucket
+                },
+                validationModules: [{ moduleName: 'RequiredValidate', options: { message: 'Required' } }],
+                disabled: ConsultationSponsorDocumentStatus === STATUS_DOCUMENT_UPLOAD_PROCESSED  || ConsultationSponsorDocumentStatus === 'PUBLISHED', // boolean value to disable the field and not allowing to upload a document
+                generate: true, // boolean value to enable the generate option
+                isMultiple: false, // to determine whether the user can upload a single document or multiple documents
+            }
+        }
+    ];
+};

@@ -1,0 +1,138 @@
+{
+    "result": true,
+    "message": "Data successfully fetched",
+    "content": {
+        "schemeId": "766ff6f0-4149-11ec-be93-8155e9a3aa06",
+        "workflows": [
+            {
+                "workflowKey": "changeFmFees",
+                "title": "Change FM Fund Fees",
+                "version": 1,
+                "enabledRoles": ["client", "admin"],
+                "steps": [
+                    {
+                        "stepKey": "uploadFma",
+                        "sort": 1,
+                        "title": "Upload IMA Attachment",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "visible": true
+                    },
+                    {
+                        "stepKey": "approveFmFees",
+                        "sort": 2,
+                        "title": "Approve IMA Attachment",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "visible": true
+                    },
+                    {
+                        "stepKey": "publishToScm",
+                        "sort": 3,
+                        "title": "Publish to Schemes",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "visible": true
+                    }
+                ],
+                "enabled": true,
+                "disabled": false,
+                "visible": true,
+                "active": true,
+                "isPortFolioEnable": false,
+                "isAbortEnable": false,
+                "currentPosition": "step1",
+                "sort": 1
+            },
+            {
+                "workflowKey": "updateIaaFmaAttachement",
+                "title": "Update IAA/IMA Attachment",
+                "version": 1,
+                "enabledRoles": ["client", "admin"],
+                "steps": [
+                    {
+                        "stepKey": "uploadIaaFma",
+                        "sort": 1,
+                        "title": "Upload IMA Attachment",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "visible": true
+                    },
+                    {
+                        "stepKey": "approveIaaFma",
+                        "sort": 2,
+                        "title": "Approve IMA Attachment",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "visible": true
+                    },
+                    {
+                        "stepKey": "publishToScm",
+                        "sort": 3,
+                        "title": "Publish to Schemes",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "visible": true
+                    }
+                ],
+                "enabled": true,
+                "disabled": false,
+                "visible": true,
+                "active": true,
+                "isPortFolioEnable": false,
+                "isAbortEnable": false,
+                "currentPosition": "step1",
+                "sort": 2
+            },
+            {
+                "workflowKey": "distributeNotice",
+                "title": "Distribute Notice",
+                "version": 1,
+                "enabledRoles": ["client", "admin"],
+                "steps": [
+                    {
+                        "stepKey": "uploadNotice",
+                        "sort": 1,
+                        "title": "Upload Notice",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "visible": true
+                    },
+                    {
+                        "stepKey": "approveNotice",
+                        "sort": 2,
+                        "title": "Approve Notice",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "visible": true
+                    },
+                    {
+                        "stepKey": "publishToScm",
+                        "sort": 3,
+                        "title": "Publish to Schemes",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "visible": true
+                    }
+                ],
+                "enabled": true,
+                "disabled": false,
+                "visible": true,
+                "active": true,
+                "isPortFolioEnable": false,
+                "isAbortEnable": false,
+                "currentPosition": "step1",
+                "sort": 3
+            }
+        ]
+    }
+}

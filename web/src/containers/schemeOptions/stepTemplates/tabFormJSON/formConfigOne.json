@@ -1,0 +1,15 @@
+[
+    {
+        "type": "full_view_container",
+        "bool": true,
+        "field": {
+            "__order": "a",
+            "name": "addressField",
+            "className": "form-control",
+            "component": "ADDRESS_FIELD",
+            "options": {
+                "title": "Address field"
+            }
+        }
+    }
+]

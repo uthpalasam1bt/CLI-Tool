@@ -1,0 +1,34 @@
+[
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Input Field",
+        "field": {
+            "__order": "c",
+            "name": "Input_Field3",
+            "className": "form-control",
+            "component": "INPUT_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    },
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Input Field",
+        "field": {
+            "__order": "d",
+            "name": "Input_Field4",
+            "className": "form-control",
+            "component": "INPUT_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    }
+]

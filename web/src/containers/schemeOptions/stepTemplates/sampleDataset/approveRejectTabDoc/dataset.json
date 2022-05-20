@@ -1,0 +1,151 @@
+{
+    "result": true,
+    "message": "Data successfully fetched",
+    "content": {
+        "workflowId": "uploadPublish",
+        "updatedAt": "12/7/2021, 6:33:44 AM",
+        "stepId": "step2",
+        "datasetVersion": 1,
+        "primaryKey": "10a802b0-5727-11ec-bd32-87f78282824c-uploadPublish-step2",
+        "entityId": "10a802b0-5727-11ec-bd32-87f78282824c",
+        "createdAt": "12/7/2021, 6:33:44 AM",
+        "data": {
+            "signatories": {},
+            "createdAt": "12/7/2021, 6:33:43 AM",
+            "documents": {
+                "PMC": {
+                    "path": "uploads/entity/10a802b0-5727-11ec-bd32-87f78282824c/uploadPublish/step1/3228abb0-5727-11ec-b6f4-3bc7118c8406/FMA",
+                    "isContinue": false,
+                    "documentStatus": "UPLOAD_COMPLETED",
+                    "title": "PMC Document",
+                    "url": "uploads/entity/10a802b0-5727-11ec-bd32-87f78282824c/uploadPublish/step1/3228abb0-5727-11ec-b6f4-3bc7118c8406/FMA/sample.pdf"
+                },
+                "IMA": {
+                    "path": "uploads/entity/10a802b0-5727-11ec-bd32-87f78282824c/uploadPublish/step1/3228abb0-5727-11ec-b6f4-3bc7118c8406/FMA",
+                    "isContinue": false,
+                    "documentStatus": "UPLOAD_COMPLETED",
+                    "title": "IMA Document",
+                    "url": "uploads/entity/10a802b0-5727-11ec-bd32-87f78282824c/uploadPublish/step1/3228abb0-5727-11ec-b6f4-3bc7118c8406/FMA/sample.pdf"
+                }
+            },
+            "datasetStatus": "P",
+            "commentId": null,
+            "approvers": {
+                "PMC": {
+                    "users": [
+                        {
+                            "userId": 1,
+                            "firstName": "Admin",
+                            "lastName": "One",
+                            "email": "venus.ad2021@gmail.com",
+                            "userType": "platformAdmin",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "status": "P",
+                            "baseType": ["clientTeamBased"]
+                        },
+                        {
+                            "userId": 3,
+                            "firstName": "Danthila",
+                            "lastName": "Kasun",
+                            "email": "danthila.dissanayake@1billiontech.com",
+                            "userType": "platformAdmin",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "status": "P",
+                            "baseType": ["clientTeamBased"]
+                        },
+                        {
+                            "userId": 4,
+                            "firstName": "anuj",
+                            "lastName": "shashimal",
+                            "email": "anujshashimal45@gmail.com",
+                            "userType": "platformAdmin",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "status": "P",
+                            "baseType": ["clientTeamBased"]
+                        },
+                        {
+                            "userId": 19,
+                            "firstName": "Thivanka",
+                            "lastName": "Nimesh",
+                            "email": "thivankanimshan@gmail.com",
+                            "userType": "platformAdmin",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "status": "P",
+                            "baseType": ["clientTeamBased"]
+                        },
+                        {
+                            "userId": 31,
+                            "firstName": "jdhdjf",
+                            "lastName": "jsdhjs",
+                            "email": "jdhjshd@gmail.com",
+                            "userType": "platformAdmin",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "status": "P",
+                            "baseType": ["clientTeamBased"]
+                        }
+                    ]
+                },
+                "IMA": {
+                    "users": [
+                        {
+                            "userId": 1,
+                            "firstName": "Admin",
+                            "lastName": "One",
+                            "email": "venus.ad2021@gmail.com",
+                            "userType": "platformAdmin",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "status": "P",
+                            "baseType": ["clientTeamBased"]
+                        },
+                        {
+                            "userId": 3,
+                            "firstName": "Danthila",
+                            "lastName": "Kasun",
+                            "email": "danthila.dissanayake@1billiontech.com",
+                            "userType": "platformAdmin",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "status": "P",
+                            "baseType": ["clientTeamBased"]
+                        },
+                        {
+                            "userId": 4,
+                            "firstName": "anuj",
+                            "lastName": "shashimal",
+                            "email": "anujshashimal45@gmail.com",
+                            "userType": "platformAdmin",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "status": "P",
+                            "baseType": ["clientTeamBased"]
+                        },
+                        {
+                            "userId": 19,
+                            "firstName": "Thivanka",
+                            "lastName": "Nimesh",
+                            "email": "thivankanimshan@gmail.com",
+                            "userType": "platformAdmin",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "status": "P",
+                            "baseType": ["clientTeamBased"]
+                        },
+                        {
+                            "userId": 31,
+                            "firstName": "jdhdjf",
+                            "lastName": "jsdhjs",
+                            "email": "jdhjshd@gmail.com",
+                            "userType": "platformAdmin",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "status": "P",
+                            "baseType": ["clientTeamBased"]
+                        }
+                    ]
+                }
+            },
+            "datasetId": "9fefb2b0-5727-11ec-8220-89e188ed2428",
+            "formData": {},
+            "userPool": {},
+            "updatedAt": "12/7/2021, 6:33:43 AM",
+            "stepId": "step2",
+            "datasetVersion": 1
+        }
+    }
+}

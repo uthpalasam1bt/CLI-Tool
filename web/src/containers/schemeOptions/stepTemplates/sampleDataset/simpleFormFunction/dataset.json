@@ -1,0 +1,27 @@
+{
+    "result": true,
+    "message": "Data successfully fetched",
+    "content": {
+        "workflowId": "formWorkflow",
+        "updatedAt": "12/8/2021, 5:45:05 AM",
+        "stepId": "step2",
+        "datasetVersion": 1,
+        "primaryKey": "d455bb80-5655-11ec-b4eb-4d04f9503fbf-formWorkflow-step2",
+        "entityId": "d455bb80-5655-11ec-b4eb-4d04f9503fbf",
+        "createdAt": "12/8/2021, 5:45:05 AM",
+        "data": {
+            "signatories": {},
+            "createdAt": "12/8/2021, 5:45:05 AM",
+            "documents": {},
+            "datasetStatus": "P",
+            "commentId": null,
+            "approvers": {},
+            "datasetId": "fee8aa20-57e9-11ec-ad8a-a1e21610875a",
+            "formData": {},
+            "userPool": {},
+            "updatedAt": "12/8/2021, 5:45:05 AM",
+            "stepId": "step2",
+            "datasetVersion": 1
+        }
+    }
+}

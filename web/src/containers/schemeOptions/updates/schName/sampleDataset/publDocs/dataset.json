@@ -1,0 +1,66 @@
+{
+    "result": true,
+    "message": "Data successfully fetched",
+    "content": {
+        "updatedAt": "11/9/2021, 4:10:21 PM",
+        "workflowId": "uploadPublish",
+        "stepId": "step3",
+        "datasetVersion": 2,
+        "primaryKey": "9ae2d6b0-4171-11ec-b647-cb1dcb7a1eda-uploadPublish-step3",
+        "entityId": "9ae2d6b0-4171-11ec-b647-cb1dcb7a1eda",
+        "createdAt": "11/9/2021, 4:09:58 PM",
+        "data": {
+            "signatories": {},
+            "createdAt": "11/9/2021, 4:09:58 PM",
+            "documents": {
+                "IAA": {
+                    "path": "uploads/entity/9ae2d6b0-4171-11ec-b647-cb1dcb7a1eda/uploadPublish/step1/abc09e40-4171-11ec-bfad-a743958a051f/FMA",
+                    "isContinue": false,
+                    "documentStatus": "UPLOADED",
+                    "title": "IAA",
+                    "url": "uploads/entity/9ae2d6b0-4171-11ec-b647-cb1dcb7a1eda/uploadPublish/step1/abc09e40-4171-11ec-bfad-a743958a051f/FMA/sample.pdf",
+                    "adminStatus": "A"
+                },
+                "IMA": {
+                    "path": "uploads/entity/9ae2d6b0-4171-11ec-b647-cb1dcb7a1eda/uploadPublish/step1/abc09e40-4171-11ec-bfad-a743958a051f/FMA",
+                    "isContinue": false,
+                    "documentStatus": "UPLOADED",
+                    "title": "IMA",
+                    "url": "uploads/entity/9ae2d6b0-4171-11ec-b647-cb1dcb7a1eda/uploadPublish/step1/abc09e40-4171-11ec-bfad-a743958a051f/FMA/sample.pdf",
+                    "adminStatus": "A"
+                },
+                "PMC": {
+                    "path": "uploads/entity/9ae2d6b0-4171-11ec-b647-cb1dcb7a1eda/uploadPublish/step1/abc09e40-4171-11ec-bfad-a743958a051f/FMA",
+                    "isContinue": false,
+                    "documentStatus": "UPLOADED",
+                    "title": "PMC",
+                    "url": "uploads/entity/9ae2d6b0-4171-11ec-b647-cb1dcb7a1eda/uploadPublish/step1/abc09e40-4171-11ec-bfad-a743958a051f/FMA/sample.pdf",
+                    "adminStatus": "A"
+                },
+                "SIP": {
+                    "path": "uploads/entity/9ae2d6b0-4171-11ec-b647-cb1dcb7a1eda/uploadPublish/step1/abc09e40-4171-11ec-bfad-a743958a051f/FMA",
+                    "isContinue": false,
+                    "documentStatus": "UPLOADED",
+                    "title": "SIP",
+                    "url": "uploads/entity/9ae2d6b0-4171-11ec-b647-cb1dcb7a1eda/uploadPublish/step1/abc09e40-4171-11ec-bfad-a743958a051f/FMA/sample.pdf",
+                    "adminStatus": "A"
+                },
+                "SCL": {
+                    "path": "uploads/entity/9ae2d6b0-4171-11ec-b647-cb1dcb7a1eda/uploadPublish/step1/abc09e40-4171-11ec-bfad-a743958a051f/FMA",
+                    "isContinue": false,
+                    "documentStatus": "UPLOADED",
+                    "title": "Sponsor consultation letter",
+                    "url": "uploads/entity/9ae2d6b0-4171-11ec-b647-cb1dcb7a1eda/uploadPublish/step1/abc09e40-4171-11ec-bfad-a743958a051f/FMA/sample.pdf",
+                    "adminStatus": "A"
+                }
+            },
+            "datasetStatus": "C",
+            "commentId": null,
+            "approvers": {},
+            "datasetId": "7c401190-4177-11ec-9030-ab56bf8531be",
+            "formData": {},
+            "userPool": {},
+            "updatedAt": "11/9/2021, 4:10:21 PM"
+        }
+    }
+}

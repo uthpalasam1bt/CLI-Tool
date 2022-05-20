@@ -1,0 +1,24 @@
+[
+    {
+        "title_client": "$inmnag$",
+        "title_admin": "$inmnag$(Client)",
+        "doc_name": "FMA",
+        "role": "client"
+    },
+    {
+        "title_client": "$plcytrms$",
+        "title_admin": "$plcytrms$(Client) ",
+        "doc_name": "PMCProposal",
+        "role": "client"
+    },
+    {
+        "title_admin": "Accepted by LGIM ($inmnag$)",
+        "doc_name": "FMA",
+        "role": "clientTeam"
+    },
+    {
+        "title_admin": "Directors ($inmnag$)",
+        "doc_name": "FMA",
+        "role": "admin"
+    }
+]

@@ -1,0 +1,131 @@
+{
+    "result": true,
+    "message": "Data successfully fetched",
+    "content": {
+        "updatedAt": "12/13/2021, 6:01:48 AM",
+        "workflowId": "uploadPublish",
+        "stepId": "step8",
+        "datasetVersion": 1,
+        "primaryKey": "4ffb2100-58ac-11ec-a3cd-b3da8a10fe07-uploadPublish-step8",
+        "entityId": "4ffb2100-58ac-11ec-a3cd-b3da8a10fe07",
+        "createdAt": "12/13/2021, 6:00:46 AM",
+        "data": {
+            "signatories": {
+                "IAA": {
+                    "client": [
+                        {
+                            "firstName": "client ",
+                            "lastName": "One",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "isSelected": false,
+                            "userType": "platformAdmin",
+                            "userRole": "client",
+                            "userId": 1,
+                            "email": "venus.ad2021@gmail.com"
+                        }
+                    ],
+                    "admin": [
+                        {
+                            "firstName": "admin",
+                            "lastName": "One",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "isSelected": false,
+                            "userType": "platformAdmin",
+                            "userRole": "admin",
+                            "userId": 1,
+                            "email": "venus.ad2021@gmail.com"
+                        }
+                    ],
+                    "clientTeam": [
+                        {
+                            "firstName": "clientTeam",
+                            "lastName": "One",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "isSelected": false,
+                            "userType": "platformAdmin",
+                            "userRole": "clientTeam",
+                            "userId": 1,
+                            "email": "venus.ad2021@gmail.com"
+                        }
+                    ]
+                },
+                "FMA": {
+                    "client": [
+                        {
+                            "firstName": "client ",
+                            "lastName": "Two",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "isSelected": false,
+                            "userType": "platformAdmin",
+                            "userRole": "client",
+                            "userId": 1,
+                            "email": "venus.ad2021@gmail.com"
+                        }
+                    ],
+                    "admin": [
+                        {
+                            "firstName": "admin",
+                            "lastName": "Two",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "isSelected": false,
+                            "userType": "platformAdmin",
+                            "userRole": "admin",
+                            "userId": 1,
+                            "email": "venus.ad2021@gmail.com"
+                        }
+                    ],
+                    "clientTeam": [
+                        {
+                            "firstName": "clientTeam",
+                            "lastName": "Two",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "isSelected": false,
+                            "userType": "platformAdmin",
+                            "userRole": "clientTeam",
+                            "userId": 1,
+                            "email": "venus.ad2021@gmail.com"
+                        }
+                    ]
+                },
+                "PMC": {
+                    "client": [
+                        {
+                            "firstName": "client ",
+                            "lastName": "Three",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "isSelected": false,
+                            "userType": "platformAdmin",
+                            "userRole": "client",
+                            "userId": 1,
+                            "email": "venus.ad2021@gmail.com"
+                        }
+                    ],
+
+                    "clientTeam": [
+                        {
+                            "firstName": "clientTeam",
+                            "lastName": "Three",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "isSelected": false,
+                            "userType": "platformAdmin",
+                            "userRole": "clientTeam",
+                            "userId": 1,
+                            "email": "venus.ad2021@gmail.com"
+                        }
+                    ]
+                }
+            },
+            "createdAt": "12/13/2021, 6:00:46 AM",
+            "datasetVersion": 1,
+            "documents": {},
+            "datasetStatus": "P",
+            "stepId": "step8",
+            "commentId": null,
+            "approvers": {},
+            "datasetId": "0388d520-5bda-11ec-bcb5-55fd99b2293b",
+            "formData": {},
+            "userPool": {},
+            "updatedAt": "12/13/2021, 6:01:48 AM"
+        }
+    }
+}

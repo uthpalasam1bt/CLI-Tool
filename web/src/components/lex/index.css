@@ -1,0 +1,6 @@
+.lex-react-ui-holder {
+  position: absolute;
+  z-index: 2147483647;
+  right: 16px;
+  bottom: 16px;
+}

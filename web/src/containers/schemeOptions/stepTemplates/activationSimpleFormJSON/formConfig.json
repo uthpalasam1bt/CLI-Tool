@@ -1,0 +1,38 @@
+[
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Input field 01",
+        "field": {
+            "name": "inputField",
+            "className": "form-control",
+            "component": "INPUT_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    },
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Number Field",
+        "field": {
+            "name": "NumberField",
+            "className": "form-control",
+            "component": "NUMBER_FIELD",
+            "options": {
+                "decimalScale": 0,
+                "allowNegative": false,
+                "allowLeadingZeros": true,
+                "maxLength": 20
+            },
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,27 @@
+{
+    "duration": { "name": "duration", "label": " Liability duration" },
+    "cashflowdate": { "name": "cashflowdate", "label": "At what date have these cashflows been produced?" },
+    "cashflowProduce": { "name": "cashflowProduce", "label": "At what date have these cashflows been produced?" },
+    "liabilityLink": { "name": "liabilityLink", "label": "Proportion of liabilities linked to inflation" },
+    "liabilityValue": { "name": "liabilityValue", "label": " Liability value" },
+    "liabilityDiscont": {
+        "name": "liabilityDiscont",
+        "label": "What is the average margin between the liability discount rate and a gilt yield?"
+    },
+    "providValueDatepicker": {
+        "name": "providValueDatepicker",
+        "label": " At what date has this value been provided?"
+    },
+    "liabilityOption": {
+        "liabilityOptions": {
+            "defaultValue": "-- Please select --",
+            "dataList": [
+                { "value": "Glit basic", "key": "glitbasic" },
+                { "value": "Accounting basic", "key": "accountingbasic" },
+                { "value": "Solvency", "key": "solvency" }
+            ]
+        },
+        "name": "liabilityOption",
+        "title": "What basis has this value been provided on?"
+    }
+}

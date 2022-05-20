@@ -1,0 +1,118 @@
+&.km-filter-common {
+    .ant-modal-body {
+        padding: 0px;
+        margin: 10px;
+        margin-bottom: 18px;
+        margin-left: 22px;
+        margin-right: 22px;
+    }
+    .km-filter-cm-btn {
+        width: 80px;
+        height: 30px;
+        background: $Blue-var 0% 0% no-repeat padding-box;
+        border: 1px solid $Blue-var;
+        border-radius: 3px;
+        opacity: 1;
+    }
+    .km-cm-btn-text-cn {
+        height: 18px;
+        text-align: left;
+        font: normal normal 500 13px/18px Roboto, sans-serif;
+        letter-spacing: 0px;
+        color: $white;
+        opacity: 1;
+    }
+
+    .km-filter-cm-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .km-filter-cm-tb-space {
+        margin-top: 18px;
+
+        .km-cm-select {
+            margin-top: 0px;
+            width: 100%;
+        }
+    }
+    .km-cm-btn-text-cansel-cn {
+        width: 40px;
+        height: 18px;
+        text-align: center;
+        font: normal normal 500 13px/18px Roboto, sans-serif;
+        letter-spacing: 0px;
+        color: $black-light;
+        opacity: 1;
+    }
+
+    .km-view-name {
+        width: 138px;
+        height: 18px;
+        text-align: left;
+        font: normal normal normal 13px/18px Roboto, sans-serif;
+        letter-spacing: 0px;
+        color: $black-light;
+        opacity: 1;
+    }
+    .km-input-views {
+        width: 325px;
+        height: 30px;
+        background: $white 0% 0% no-repeat padding-box;
+        border: 1px solid $light-grey;
+        border-radius: 3px;
+        opacity: 1;
+    }
+
+    .km-cm-title {
+        width: 205px;
+        height: 18px;
+        text-align: left;
+        font: normal normal bold 13px/18px sans-serif, Roboto !important;
+        letter-spacing: 0px;
+        color: $black-light;
+        opacity: 1;
+    }
+    .km-filter-cm-btn-cancel {
+        width: 80px;
+        height: 30px;
+        border: 1px solid $white-light;
+        border-radius: 3px;
+        opacity: 1;
+    }
+    .km-select-user-option {
+        width: 50px;
+        height: 16px;
+        text-align: left;
+        font: normal normal normal 12px/16px Roboto, sans-serif;
+        letter-spacing: 0px;
+        color: $black-light;
+        opacity: 1;
+    }
+    .km-cm-input {
+        text-align: left;
+        font: normal normal normal 13px/18px Roboto, sans-serif;
+        letter-spacing: 0px;
+        color: $black-light;
+        opacity: 1;
+    }
+}
+
+&.km-fiter-save-model {
+    .km-filter-sv-btn {
+        width: 80px;
+        height: 30px;
+        background: $blue-light 0% 0% no-repeat padding-box;
+        border: 1px solid $blue-light;
+        border-radius: 3px;
+        opacity: 1;
+    }
+
+    .km-text-content {
+        font-size: 14px;
+    }
+    .km.save-div-tag-btn {
+        text-align: center;
+    }
+}

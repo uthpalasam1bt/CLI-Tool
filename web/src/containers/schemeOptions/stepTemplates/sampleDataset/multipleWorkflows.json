@@ -1,0 +1,529 @@
+{
+    "result": true,
+    "message": "Data successfully fetched",
+    "content": {
+        "schemeId": "766ff6f0-4149-11ec-be93-8155e9a3aa06",
+        "workflows": [
+            {
+                "workflowKey": "stepTemplates",
+                "title": "Step Templates",
+                "version": 1,
+                "enabledRoles": ["client", "admin"],
+                "steps": [
+                    {
+                        "stepKey": "step1",
+                        "sort": 1,
+                        "title": "Simple Form (Function) ",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step2",
+                        "sort": 2,
+                        "title": "Simple Form (JSON) ",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step3",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 3,
+                        "title": "Tabs Form (Function)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step4",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 4,
+                        "title": "Tabs Form (JSON)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step5",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 5,
+                        "title": "Simple Form Data Download (Function)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step6",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 6,
+                        "title": "Simple Form Data Download (JSON) ",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step7",
+                        "sort": 7,
+                        "title": "Tabs Form Data Download (Fuction)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step8",
+
+                        "sort": 8,
+                        "title": "Tabs Form Data Download (Json) ",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step9",
+
+                        "sort": 9,
+                        "title": "Simple Form Data Download with Change (Function)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step10",
+
+                        "sort": 10,
+                        "title": "Simple Form Data Download with Change (Json)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step11",
+
+                        "sort": 11,
+                        "title": "Document Upload-Generate",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step12",
+
+                        "sort": 12,
+                        "title": "Document Upload-Generate with Tabs",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step13",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 13,
+                        "title": "Approve-Reject Single Document ",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step14",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 14,
+                        "title": "Approve-Reject Documents with Tabs",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step15",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 15,
+                        "title": "Approve-Reject Simple form ",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step16",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 16,
+                        "title": "Approve-Reject Tabs form ",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step17",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 17,
+                        "title": "Approve-Reject Dynamic Content ",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step18",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 18,
+                        "title": "Publish Single Document",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step19",
+                        "sort": 19,
+                        "title": "Publish Multiple Document ",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step20",
+                        "sort": 20,
+                        "title": "Publish Form Data (Function)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step21",
+                        "sort": 21,
+                        "title": "Publish Form Data (JSON)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step22",
+                        "sort": 22,
+                        "title": "Publish Document by uploading",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step23",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 23,
+                        "title": "Execution",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step24",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 24,
+                        "title": "Activation Default",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step25",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 25,
+                        "title": "Activation Simple Form (Function)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step26",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 26,
+                        "title": "Activation Simple Form (JSON)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step27",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 27,
+                        "title": "Activation Tabs Form (Function)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step28",
+                        "initialDataConfig": [
+                            {
+                                "from": "schemeCategory",
+                                "origin": "SCHEME",
+                                "to": "formData.schemeCategory"
+                            }
+                        ],
+                        "sort": 28,
+                        "title": "Activation Tabs Form (JSON)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step29",
+
+                        "sort": 29,
+                        "title": "Tab Form Data Download with Change (Function)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step30",
+
+                        "sort": 30,
+                        "title": "Tab Form Data Download with Change (Json)",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step31",
+
+                        "sort": 31,
+                        "title": "Document Link Download",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    },
+                    {
+                        "stepKey": "step32",
+
+                        "sort": 32,
+                        "title": "Deactivate Account",
+                        "enabledRoles": ["client", "admin"],
+                        "claims": {},
+                        "enabled": true,
+                        "disabled": false,
+                        "visible": true,
+                        "completed": false,
+                        "rejected": false
+                    }
+                ],
+                "enabled": true,
+                "disabled": false,
+                "visible": true,
+                "active": true,
+                "isPortFolioEnable": false,
+                "isAbortEnable": false,
+                "currentPosition": "step1",
+                "sort": 3
+            }
+        ]
+    }
+}

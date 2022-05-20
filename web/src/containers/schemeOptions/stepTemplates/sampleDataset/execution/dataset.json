@@ -1,0 +1,85 @@
+{
+    "result": true,
+    "message": "Data successfully fetched",
+    "content": {
+        "updatedAt": "12/13/2021, 6:01:48 AM",
+        "workflowId": "uploadPublish",
+        "stepId": "step8",
+        "datasetVersion": 1,
+        "primaryKey": "4ffb2100-58ac-11ec-a3cd-b3da8a10fe07-uploadPublish-step8",
+        "entityId": "4ffb2100-58ac-11ec-a3cd-b3da8a10fe07",
+        "createdAt": "12/13/2021, 6:00:46 AM",
+        "data": {
+            "signatories": {
+                "IAA": {
+                    "admin": [
+                        {
+                            "firstName": "Admin",
+                            "lastName": "One",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "isSelected": false,
+                            "userType": "platformAdmin",
+                            "userRole": "admin",
+                            "userId": 1,
+                            "email": "venus.ad2021@gmail.com"
+                        }
+                    ]
+                },
+                "PMCProposal": {
+                    "admin": [
+                        {
+                            "firstName": "Admin",
+                            "lastName": "Two",
+                            "imageUrl": "https://tpip-venus-dev-public.s3.eu-west-2.amazonaws.com/profile.png",
+                            "isSelected": false,
+                            "userType": "platformAdmin",
+                            "userRole": "admin",
+                            "userId": 2,
+                            "email": "venus.ad2021@gmail.com"
+                        }
+                    ]
+                }
+            },
+            "createdAt": "12/13/2021, 6:00:46 AM",
+            "datasetVersion": 1,
+            "documents": {
+                "ManagerTerminationLetter": {
+                    "path": "uploads/entity/4ffb2100-58ac-11ec-a3cd-b3da8a10fe07/uploadPublish/step4/d86ce9d1-5bd9-11ec-9249-d52989c8a1ab/ManagerTerminationLetter",
+                    "isContinue": false,
+                    "urls": [
+                        {
+                            "uid": "rc-upload-1639371836783-45",
+                            "url": "uploads/entity/4ffb2100-58ac-11ec-a3cd-b3da8a10fe07/uploadPublish/step4/d86ce9d1-5bd9-11ec-9249-d52989c8a1ab/ManagerTerminationLetter/Modernizr__2__Logo_1.pdf",
+                            "documentStatus": "PUBLISHED"
+                        }
+                    ],
+                    "title": "Manager Termination Letter(s)"
+                },
+                "PMCProposal": {
+                    "path": "uploads/entity/4ffb2100-58ac-11ec-a3cd-b3da8a10fe07/uploadPublish/step4/d86ce9d2-5bd9-11ec-9249-d52989c8a1ab/PMCProposal",
+                    "isContinue": false,
+                    "documentStatus": "PUBLISHED",
+                    "title": "PMC Proposal",
+                    "url": "uploads/entity/4ffb2100-58ac-11ec-a3cd-b3da8a10fe07/uploadPublish/step4/d86ce9d2-5bd9-11ec-9249-d52989c8a1ab/PMCProposal/Modernizr__2__Logo_1.pdf",
+                    "adminStatus": "A"
+                },
+                "IAA": {
+                    "path": "uploads/entity/4ffb2100-58ac-11ec-a3cd-b3da8a10fe07/uploadPublish/step4/d86ce9d0-5bd9-11ec-9249-d52989c8a1ab/IAA",
+                    "isContinue": false,
+                    "documentStatus": "PUBLISHED",
+                    "title": "IAA Document",
+                    "url": "uploads/entity/4ffb2100-58ac-11ec-a3cd-b3da8a10fe07/uploadPublish/step4/d86ce9d0-5bd9-11ec-9249-d52989c8a1ab/IAA/Modernizr__2__Logo_1.pdf",
+                    "adminStatus": "A"
+                }
+            },
+            "datasetStatus": "P",
+            "stepId": "step8",
+            "commentId": null,
+            "approvers": {},
+            "datasetId": "0388d520-5bda-11ec-bcb5-55fd99b2293b",
+            "formData": {},
+            "userPool": {},
+            "updatedAt": "12/13/2021, 6:01:48 AM"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="91" height="66" viewBox="0 0 91 66">
+  <g id="Group_2201" data-name="Group 2201" transform="translate(-830 -432)">
+    <g id="Group_2200" data-name="Group 2200">
+      <ellipse id="Ellipse_19" data-name="Ellipse 19" cx="45.5" cy="10" rx="45.5" ry="10" transform="translate(830 478)" fill="#f5f5f5"/>
+      <rect id="Rectangle_165" data-name="Rectangle 165" width="41" height="51" transform="translate(856 437)" fill="#fff"/>
+    </g>
+    <g id="Layer_2" data-name="Layer 2" transform="translate(847 431.948)">
+      <g id="invisible_box" data-name="invisible box">
+        <rect id="Rectangle_163" data-name="Rectangle 163" width="61" height="61" transform="translate(0 0.052)" fill="none"/>
+        <rect id="Rectangle_164" data-name="Rectangle 164" width="61" height="61" transform="translate(0 0.052)" fill="none"/>
+      </g>
+      <g id="icons_Q2" data-name="icons Q2" transform="translate(5.088 2.544)">
+        <g id="Group_2198" data-name="Group 2198">
+          <path id="Path_5000" data-name="Path 5000" d="M37.438,25.544A2.544,2.544,0,0,0,34.894,23H14.544a2.544,2.544,0,0,0,0,5.088H34.894A2.544,2.544,0,0,0,37.438,25.544Z" transform="translate(-1.825 3.71)" fill="#d9d9d9"/>
+          <path id="Path_5001" data-name="Path 5001" d="M14.544,31a2.544,2.544,0,0,0,0,5.088H24.719a2.544,2.544,0,0,0,0-5.088Z" transform="translate(-1.825 5.885)" fill="#d9d9d9"/>
+          <path id="Path_5002" data-name="Path 5002" d="M44.7,52.333H9.088V9.088H21.807a2.544,2.544,0,0,0,2.544-2.544h0A2.544,2.544,0,0,0,21.807,4H6.544A2.544,2.544,0,0,0,4,6.544V54.876A2.544,2.544,0,0,0,6.544,57.42h40.7a2.544,2.544,0,0,0,2.544-2.544V34.526a2.544,2.544,0,0,0-2.544-2.544h0A2.544,2.544,0,0,0,44.7,34.526Z" transform="translate(-4 -1.456)" fill="#d9d9d9"/>
+          <path id="Path_5003" data-name="Path 5003" d="M54.482,28.2,48,21.715a12.338,12.338,0,0,0,2.162-7,12.719,12.719,0,1,0-25.438,0,12.592,12.592,0,0,0,.636,3.816H14.544a2.544,2.544,0,0,0,0,5.088H28.408a12.846,12.846,0,0,0,9.031,3.816,12.338,12.338,0,0,0,7-2.162l6.487,6.487A2.519,2.519,0,1,0,54.482,28.2ZM29.807,14.719a7.631,7.631,0,1,1,7.631,7.631,7.631,7.631,0,0,1-7.631-7.631Z" transform="translate(-1.825 -2)" fill="#d9d9d9"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

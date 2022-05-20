@@ -1,0 +1,121 @@
+[
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Approximate number of members in the scheme",
+        "field": {
+            "__order": "c",
+            "name": "numberOfMembers",
+            "className": "form-control",
+            "component": "CURRENCY_FIELD",
+            "options": {
+                "props": {
+                    "precision": 0,
+                    "className": "form-control"
+                }
+            },
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                },
+                {
+                    "moduleName": "GreaterThanZeroValidate"
+                }
+            ]
+        }
+    },
+
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Number of trustees",
+        "field": {
+            "__order": "f",
+            "name": "numberOfTrustees",
+            "className": "form-control",
+            "component": "NUMBER_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                },
+                {
+                    "moduleName": "GreaterThanZeroValidate"
+                }
+            ]
+        }
+    },
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Number of trustees required to approve a strategy change",
+        "field": {
+            "__order": "g",
+            "name": "numberOfTrusteeAppCh",
+            "className": "form-control",
+            "component": "NUMBER_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                },
+                {
+                    "moduleName": "GreaterThanZeroValidate"
+                }
+            ]
+        }
+    },
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Number of trustees required to sign a legal document",
+        "field": {
+            "__order": "h",
+            "name": "dynamicSignatoryCount",
+            "className": "form-control",
+            "component": "NUMBER_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                },
+                {
+                    "moduleName": "GreaterThanZeroValidate"
+                }
+            ]
+        }
+    },
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Input Field",
+        "field": {
+            "__order": "i",
+            "name": "inputField",
+            "className": "form-control",
+            "component": "INPUT_FIELD",
+
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    },
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Number field",
+        "field": {
+            "__order": "f",
+            "name": "numberField",
+            "className": "form-control",
+            "component": "NUMBER_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                },
+                {
+                    "moduleName": "GreaterThanZeroValidate"
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "title_client": "",
+        "title_admin": "Client",
+        "doc_name": "IAA",
+        "role": "client"
+    },
+    {
+        "title_admin": "Accepted by LGIM",
+        "doc_name": "IAA",
+        "role": "clientTeam"
+    },
+    {
+        "title_admin": "Directors",
+        "doc_name": "IAA",
+        "role": "admin"
+    }
+]

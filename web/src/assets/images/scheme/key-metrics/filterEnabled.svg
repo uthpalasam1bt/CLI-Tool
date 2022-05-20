@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+  <g id="filterEnabled" transform="translate(-0.879 -0.211)">
+    <g id="invisible_box" data-name="invisible box" transform="translate(0.621 -0.047)">
+      <rect id="Rectangle_686" data-name="Rectangle 686" width="12" height="12" transform="translate(0.258 0.258)" fill="none"/>
+    </g>
+    <g id="Icons" transform="translate(1.599 0.932)">
+      <path id="Path_5014" data-name="Path 5014" d="M10.068,14.558H9.883l-1.848-.4a.818.818,0,0,1-.607-.792v-3.3L4.261,7.115A.686.686,0,0,1,4,6.534V4.792A.792.792,0,0,1,4.789,4h8.974a.792.792,0,0,1,.792.792V6.8a.739.739,0,0,1-.29.607l-3.4,2.692v3.669a.8.8,0,0,1-.792.792ZM8.484,13.132l1.32.317V9.6l3.7-2.93V5.056H5.053V6.428L8.484,9.622Z" transform="translate(-3.996 -4)" fill="#2c91c5"/>
+    </g>
+  </g>
+</svg>

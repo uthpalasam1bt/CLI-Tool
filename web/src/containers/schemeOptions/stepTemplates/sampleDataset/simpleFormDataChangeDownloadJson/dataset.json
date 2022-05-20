@@ -1,0 +1,56 @@
+{
+    "result": true,
+    "message": "Data successfully fetched",
+    "content": {
+        "workflowId": "formWorkflow",
+        "updatedAt": "12/8/2021, 5:45:05 AM",
+        "stepId": "step2",
+        "datasetVersion": 1,
+        "primaryKey": "d455bb80-5655-11ec-b4eb-4d04f9503fbf-formWorkflow-step2",
+        "entityId": "d455bb80-5655-11ec-b4eb-4d04f9503fbf",
+        "createdAt": "12/8/2021, 5:45:05 AM",
+        "data": {
+            "signatories": {},
+            "createdAt": "12/8/2021, 5:45:05 AM",
+            "documents": {},
+            "datasetStatus": "P",
+            "commentId": null,
+            "approvers": {},
+            "datasetId": "fee8aa20-57e9-11ec-ad8a-a1e21610875a",
+            "formData": {
+                "pprimaryTrusteeEmail": "noreplay@test.com",
+                "numberOfMembers": 1,
+                "city": "dehiwala",
+                "numberField": 100,
+                "inputField": "smith",
+                "address2": "yyy",
+                "address1": "16 2a ,atapatty6y6yu",
+                "dateTrustDeed": "2021-12-07",
+                "postalCode": "10352",
+                "numberOfTrusteeAppCh": "2",
+                "primaryTrusteeFirstName": "john",
+                "dynamicSignatoryCount": "1",
+                "primaryTrusteeContact": "77566533434",
+                "schemeCategory": "navGuide",
+                "numberOfTrustees": "1",
+                "primaryTrusteeLastName": "smith",
+                "trustDeed": "uploads/scheme/d455bb80-5655-11ec-b4eb-4d04f9503fbf/iaa/requestIAA/85d04c60-57e9-11ec-b5fe-efce8a8deff2/Modernizr__2__Logo_1.pdf",
+                "hmrcDocument": "uploads/scheme/d455bb80-5655-11ec-b4eb-4d04f9503fbf/iaa/requestIAA/6a1d14d0-57e9-11ec-b5fe-efce8a8deff2/Modernizr__2__Logo_1.pdf",
+                "schemeAccount": "uploads/scheme/d455bb80-5655-11ec-b4eb-4d04f9503fbf/iaa/requestIAA/700b54b0-57e9-11ec-b5fe-efce8a8deff2/Modernizr__2__Logo_1.pdf",
+                "incumbentManagers": [
+                    {
+                        "invesmentManagerPimaryContact": "343434343",
+                        "invesmentManagerEmail": "noreplay@test.com",
+                        "invesmentManagerContactNumber": "3434343343434",
+                        "invesmentManagerName": "ahmed",
+                        "invesmentManagerAccountNumber": "434434343434"
+                    }
+                ]
+            },
+            "userPool": {},
+            "updatedAt": "12/8/2021, 5:45:05 AM",
+            "stepId": "step2",
+            "datasetVersion": 1
+        }
+    }
+}

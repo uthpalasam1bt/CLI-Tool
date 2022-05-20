@@ -1,0 +1,125 @@
+[
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "input field 1",
+        "field": {
+            "__order": "a",
+            "name": "activationCode",
+            "className": "form-control",
+            "component": "INPUT_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    },
+    {
+        "type": "half_container",
+        "childComponents": [
+            {
+                "bool": true,
+                "label": "Input field 2",
+                "field": {
+                    "__order": "b",
+                    "name": "activationCode2",
+                    "className": "form-control",
+                    "component": "INPUT_FIELD",
+                    "validationModules": [
+                        {
+                            "moduleName": "RequiredValidate"
+                        }
+                    ]
+                }
+            },
+            {
+                "bool": true,
+                "label": "Input field 3",
+                "field": {
+                    "__order": "c",
+                    "name": "activationCode3",
+                    "className": "form-control",
+                    "component": "INPUT_FIELD",
+                    "validationModules": [
+                        {
+                            "moduleName": "RequiredValidate"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "type": "full_container",
+        "label": "Date Picker",
+        "field": {
+            "__order": "d",
+            "name": "datePicker",
+            "className": "form-control",
+            "component": "DATE_PICKER",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    },
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Currency Field",
+        "field": {
+            "__order": "e",
+            "name": "currencyField",
+            "className": "form-control",
+            "component": "CURRENCY_FIELD",
+            "options": {
+                "props": {
+                    "precision": 0,
+                    "className": "form-control",
+                    "thousandSeparator": ".",
+                    "decimalSeparator": ".",
+                    "prefix": "",
+                    "suffix": ""
+                },
+                "validationModules": [
+                    {
+                        "moduleName": "RequiredValidate"
+                    },
+                    {
+                        "moduleName": "NumericalValidate",
+                        "options": {
+                            "message": "Invalid Input"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "type": "full_container",
+        "label": "Number Field",
+        "bool": true,
+        "field": {
+            "__order": "f",
+            "name": "numberField",
+            "className": "form-control",
+            "component": "NUMBER_FIELD",
+            "suffix": "%",
+            "prefix": "",
+            "options": {
+                "decimalScale": 0,
+                "placeholder": 0,
+                "allowNegative": false,
+                "min": 0,
+                "max": 100
+            },
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    }
+]

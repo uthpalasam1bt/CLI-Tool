@@ -1,0 +1,23 @@
+[
+
+    {
+        "title_admin": "Directors",
+        "title_client": "Client (Investment Management Agreement)",
+        "key": "IAA",
+        "role": "client"
+    },
+    {
+        "title_admin": "Directors",
+        "title_client": "Client (Investment Management Agreement)",
+        "key": "IAA",
+        "role": "admin"
+    },
+    {
+        "title_admin": "Accepted by LGIM",
+        "title_client": "Client (Policy Terms)",
+        "key": "IAA",
+        "role": "clientTeam"
+    }
+  
+    
+]

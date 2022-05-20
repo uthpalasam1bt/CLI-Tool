@@ -1,0 +1,55 @@
+&.km-filter-cm {
+    display: inline-flex;
+    margin: 1px;
+    margin-left: 0px;
+
+}
+
+&.km-col-tb {
+    margin: 5px;
+
+    .ant-btn {
+        font-size: 13px !important;
+    }
+    .km-filter-cm-btn {
+        width: 54px;
+        height: 25px;
+        background: $blue-light 0% 0% no-repeat padding-box;
+        font-size: 13px;
+        border: 1px solid $blue-light;
+        border-radius: 4px;
+        opacity: 1;
+    }
+
+    .km-filter-cm-input-Number{
+        width: 180px;
+        
+    }
+    .km-filter-cm-slider{
+        min-width: 8rem;
+    }
+    .km-filter-cm-ck-grp{
+      display: -ms-inline-grid;
+    }
+    .km-filter-date-picker{
+        font-size: 10px;
+    }
+}
+
+
+&.km-filter-cm-btn-edit {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 13px !important;
+    font-weight: 500;
+    border-radius: 0;
+    border-top: 1px solid $dark-gary !important;
+    margin-top: 5px;
+    padding: 6px 0;
+    letter-spacing: 0px;
+    color: $blue-light;
+    opacity: 1;
+    border: none;
+    
+}

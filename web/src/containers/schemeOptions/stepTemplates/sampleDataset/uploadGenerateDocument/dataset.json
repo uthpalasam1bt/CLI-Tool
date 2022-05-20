@@ -1,0 +1,22 @@
+{
+    "result": true,
+    "message": "Data successfully fetched",
+    "content": {
+        "data": {
+            "formData": {
+                "schemeCategory": "navGuide"
+            },
+            "documents": {
+                "FMA": {
+                    "path": "uploads/entity/3957cd00-5748-11ec-a453-d5d3807444da/uploadPublish/step1/748b9070-574b-11ec-8bbf-3dd66cde77a8/FMA",
+                    "title": "FMA Document",
+                    "isContinue": false
+                }
+            },
+            "commentId": null,
+            "approvers": {},
+            "signatories": {},
+            "userPool": {}
+        }
+    }
+}

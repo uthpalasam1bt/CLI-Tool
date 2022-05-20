@@ -1,0 +1,22 @@
+{
+    "futureAccuralChild": [
+        { "name": "annualCostOfAccural", "label": "What is the current annual cost of accural?", "placeHolder": "" },
+        {
+            "name": "memberContributions",
+            "label": "What are the combined company and member contributions in respect of accrual?",
+            "placeHolder": ""
+        }
+    ],
+    "buyOutValueChild": {
+        "name": "liabilityValue",
+        "label": "Target buy-out liability value, if any",
+        "placeHolder": ""
+    },
+    "datePicker": { "name": "valueDate", "label": "At what date has this value been provided?", "placeHolder": "" },
+    "ContributionOptions": [
+        {
+            "input": { "name": "deficitContributionName", "label": "Deficit contribution", "placeHolder": "" },
+            "date": { "name": "contributionDate", "label": "Deficit contribution Date ", "placeHolder": "" }
+        }
+    ]
+}

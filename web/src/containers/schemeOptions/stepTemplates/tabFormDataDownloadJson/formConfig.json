@@ -1,0 +1,51 @@
+[
+    {
+        "type": "full_container",
+        "label": "Approximate number of members in the scheme",
+        "iIcon": "It doesn’t seem to be possible to update some of this information",
+        "field": {
+            "name": "numOfMembers",
+            "className": "form-control",
+            "component": "NUMBER_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                },
+                {
+                    "moduleName": "GreaterThanZeroValidate"
+                }
+            ]
+        }
+    },
+    {
+        "type": "full_container",
+        "label": "Number of trustees",
+        "field": {
+            "name": "numberOfTrustees",
+            "className": "form-control",
+            "component": "NUMBER_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                },
+                {
+                    "moduleName": "GreaterThanZeroValidate"
+                }
+            ]
+        }
+    },
+    {
+        "type": "full_container",
+        "label": "trustee name",
+        "field": {
+            "name": "trusteeName",
+            "className": "form-control",
+            "component": "INPUT_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "title_admin": "PMC",
+        "title_client": "Client (Policy Terms)",
+        "doc_name": "PMCProposal",
+        "role": "admin"
+    },
+    {
+        "title_admin": "IAA",
+        "title_client": "Client (Investment Management Agreement)",
+        "doc_name": "IAA",
+        "role": "admin"
+    }
+]

@@ -1,0 +1,147 @@
+{
+    "proposalName": {
+        "name": "prposalName",
+        "label": "Formal Proposal name",
+        "placeHolder": "Proposal Name"
+    },
+    "assetValue": {
+        "name": "assertValue",
+        "label": "Asset value",
+        "placeholder": "asset value"
+    },
+    "assetValueDate": {
+        "name": "assertValueDate",
+        "label": "Asset value date",
+        "placeholder": "asset value date"
+    },
+    "returnFee": {
+        "name": "returnFee",
+        "label": "Do you know the target return above gilts?",
+        "options": [
+            {
+                "title": "YES",
+                "value": "yes"
+            },
+            {
+                "title": "NO",
+                "value": "no"
+            }
+        ]
+    },
+    "currentAssetAllocation": {
+        "name": "currentAssetAllocation",
+        "label": "Do you know your current asset allocation?"
+    },
+    "returnGiftFee": {
+        "name": "returnGiftFee",
+        "label": "Target return above gilts (net of fees)"
+    },
+    "total": {
+        "name": "total",
+        "label": "Total",
+        "expression": "{\"<=\":100}",
+        "type": "number"
+    },
+    "Simple": [
+        {
+            "Lname": "equities",
+            "Llabel": "Equities",
+            "LplaceHolder": "%",
+            "Rname": "corporateBonds",
+            "Rlabel": "Corporate Bonds",
+            "RplaceHolder": "%",
+            "type": "number"
+        },
+        {
+            "Lname": "property",
+            "Llabel": "Property",
+            "LplaceHolder": "%",
+            "Rname": "governmentBonds",
+            "Rlabel": "Government Bonds",
+            "RplaceHolder": "%",
+            "type": "number"
+        },
+        {
+            "Lname": "alternatives",
+            "Llabel": "Alternatives",
+            "LplaceHolder": "%",
+            "Rname": "cash",
+            "Rlabel": "Cash",
+            "RplaceHolder": "%",
+            "type": "number"
+        }
+    ],
+    "Detail": [
+        {
+            "Lname": "ukQuality",
+            "Llabel": "UK Equity",
+            "LplaceHolder": "%",
+            "Rname": "diversifiedGrowth",
+            "Rlabel": "Diversified Growth",
+            "RplaceHolder": "%",
+            "type": "number"
+        },
+        {
+            "Lname": "globalEquity",
+            "Llabel": "Global Equity",
+            "LplaceHolder": "%",
+            "Rname": "corporateBonds",
+            "Rlabel": "Corporate Bonds",
+            "RplaceHolder": "%",
+            "type": "number"
+        },
+        {
+            "Lname": "emergingMarketEquity",
+            "Llabel": "Emerging Market Equity",
+            "LplaceHolder": "%",
+            "Rname": "overseasSovereignBonds",
+            "Rlabel": "Overseas Sovereign Bonds",
+            "RplaceHolder": "%",
+            "type": "number"
+        },
+        {
+            "Lname": "highYieldBonds",
+            "Llabel": "High Yield Bonds",
+            "LplaceHolder": "%",
+            "Rname": "nominalGilts",
+            "Rlabel": "Nominal Gilts",
+            "RplaceHolder": "%",
+            "type": "number"
+        },
+        {
+            "Lname": "marketDebt",
+            "Llabel": "Emerging Market Debt",
+            "LplaceHolder": "%",
+            "Rname": "ldi",
+            "Rlabel": "LDI",
+            "RplaceHolder": "%",
+            "type": "number"
+        },
+        {
+            "Lname": "property",
+            "Llabel": "Property",
+            "LplaceHolder": "%",
+            "Rname": "cash",
+            "Rlabel": "Cash",
+            "RplaceHolder": "%",
+            "type": "number"
+        }
+    ],
+    "interestPercentage": {
+        "name": "interestPercentage",
+        "label": "Interest hedge ratio (as a % of assets)"
+    },
+    "inflationPercentage": {
+        "name": "inflationPercentage",
+        "label": "Inflation hedge ratio (as a % of assets)"
+    },
+    "manageNconsulting": {
+        "name": "manageNconsulting",
+        "label": "Asset management & consulting fees (as a % of assets)"
+    },
+    "options": [
+        { "title": "Option 1", "value": "option1" },
+        { "title": "Option 2", "value": "option2" },
+        { "title": "Option 3", "value": "option3" }
+    ]
+}

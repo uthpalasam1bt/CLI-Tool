@@ -1,0 +1,77 @@
+[
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Phone Number Field",
+        "field": {
+            "__order": "a",
+            "name": "phoneNumber",
+            "className": "form-control",
+            "component": "PHONE_NUMBER_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                },
+                {
+                    "moduleName": "LengthValidate",
+                    "options": {
+                        "min": 9
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "type": "full_container",
+        "label": "Choose Option",
+        "bool": true,
+        "field": {
+            "__order": "b",
+            "name": "selectOption",
+            "className": "form-control",
+            "component": "SELECT_OPTION",
+            "options": {
+                "defauliValue": "Select",
+                "dataList": [
+                    {
+                        "key": "1",
+                        "value": "Technical Provisions"
+                    },
+                    {
+                        "key": "2",
+                        "value": "Gilts Basis"
+                    },
+                    {
+                        "key": "3",
+                        "value": "Accounting Basis"
+                    },
+                    {
+                        "key": "4",
+                        "value": "Solvency Basis"
+                    }
+                ]
+            },
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    },
+    {
+        "type": "full_view_container",
+        "bool": true,
+        "field": {
+            "name": "textArea",
+            "__order": "c",
+            "className": "form-control",
+            "component": "TEXTAREA",
+            "maxlength": 1500,
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,77 @@
+&.aprove-model {
+    width: 390px !important;
+
+    .ant-modal-body {
+        padding: 0 ;
+    }
+    //modal-body
+    .ant-modal-content {
+        width: 390px;
+    }
+
+    .btn-footer-row {
+        float: right;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    }
+
+    .btn-container-footer {
+        width: 80px;
+        height: 30px;
+        background: $blue-light 0% 0% no-repeat padding-box;
+        border: 1px solid $blue-light;
+        border-radius: 3px;
+        font: normal normal medium 13px/18px Roboto, sans-serif;
+        letter-spacing: 0px;
+        color: $white;
+        opacity: 1;
+    }
+    .header-title {
+        width: 56px;
+        height: 18px;
+
+        text-align: left;
+        font: normal normal bold 13px/18px Roboto, sans-serif;
+        letter-spacing: 0px;
+        color: $black-light;
+        opacity: 1;
+    }
+    .ant-table-body {
+        th {
+            padding: 13px 30px;
+            font-size: 14px;
+            border-bottom: none;
+            color: $black;
+        }
+
+        td {
+            padding: 0px 30px 18px 30px;
+            border-bottom: none;
+        }
+
+        tr {
+            &:first-child {
+                td {
+                    padding-top: 6px !important;
+                }
+            }
+        }
+    }
+    .user-details {
+        padding: 10px;
+        padding-left: 15px;
+
+        .name {
+            font-size: 14px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            color: $black;
+        }
+
+        .date {
+            color: $black-wo;
+            @include font-size(12);
+            margin-bottom: 0;
+        }
+    }
+}

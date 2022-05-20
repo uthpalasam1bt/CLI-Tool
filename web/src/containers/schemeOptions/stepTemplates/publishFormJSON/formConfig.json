@@ -1,0 +1,50 @@
+[
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Activation code 1",
+        "field": {
+            "__order": "a",
+            "name": "activationCode1",
+            "className": "form-control",
+            "component": "INPUT_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    },
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Activation code 2",
+        "field": {
+            "__order": "a",
+            "name": "activationCode2",
+            "className": "form-control",
+            "component": "INPUT_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    },
+    {
+        "type": "full_container",
+        "bool": true,
+        "label": "Activation code 3",
+        "field": {
+            "__order": "a",
+            "name": "activationCode3",
+            "className": "form-control",
+            "component": "INPUT_FIELD",
+            "validationModules": [
+                {
+                    "moduleName": "RequiredValidate"
+                }
+            ]
+        }
+    }
+]

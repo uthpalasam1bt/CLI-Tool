@@ -1,0 +1,216 @@
+.users-for-approval-wrapper {
+  .inner-header {
+    border-bottom: 1px solid $light-grey;
+    padding: 0 16px 10px;
+
+    .title {
+      font-weight: 700;
+      @include font-size(14);
+      margin-bottom: 0;
+    }
+
+    .selected-users {
+      color: $blue;
+      font-weight: $bold;
+      @include font-size(13);
+      float: right;
+      text-align: right;
+
+      @include mobile {
+        width: 100%;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .content-holder {
+    padding: 0;
+
+    .approval-list-items {
+      .list {
+        padding: 16px;
+        text-align: left;
+        width: 100%;
+
+        .ant-list-item-meta {
+          align-items: center;
+        }
+
+        .ant-list-item-meta-title {
+          width: 200px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .image {
+          width: 30px;
+        }
+
+        .btn-approval {
+          color: $white;
+          @include font-size(14);
+          font-weight: $bold;
+          border-radius: 100px;
+          outline: 0;
+          box-shadow: none;
+          padding: 6px 0px;
+
+          text-transform: capitalize;
+          width: 100px;
+
+          &.btn-true {
+            background-color: $light-grey;
+            border: 1px solid $light-grey;
+          }
+
+          &.btn-false {
+            background-color: $blue;
+            border: 1px solid $blue;
+          }
+          @include mobile {
+            width:100px;
+            margin-bottom: 5px;
+
+          }
+          //changes button loading spinner to red
+          &.red-spinner {
+            .anticon-loading {
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.categorized-user-picker-wrapper {
+  .main-title {
+    font-weight: 700;
+    font-size: 14px;
+    padding: 0 16px 0;
+  }
+  .trustee-select{
+    display: flex;
+    justify-content: space-between;
+    margin:20px 0 10px 0;
+  }
+
+  .trusteee-select-head{
+    font-weight: normal;
+    color: #ACB1B5;
+  font-size: 14px;
+    padding: 0 16px 10px;
+  }
+
+  hr {
+    /*border: .5px solid #000;*/
+    margin: 10px 10px 0 0px;
+  
+
+  }
+  
+  .hr-line {
+    -moz-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+   }
+   .blue-select{
+     color: #0099CB;
+     font-size: 13px;
+     font-weight: bold;
+   }
+   .colapse-sel{
+     margin-right: 20px;
+   }
+  .prof-name{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px 10px 15px;
+    padding-bottom: 10px;
+    border-bottom:  .5px solid #dedede;
+
+  
+
+    .name{
+      font-size: 14px;
+      font-weight: normal;
+      color: #616161;
+      padding-left: 10px;
+    }
+
+  }
+  .last-name-border{
+    border-bottom: none;
+  }
+
+  .btn-approval {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 100px;
+    outline: 0;
+    box-shadow: none;
+    padding: 6px 0px;
+
+    text-transform: capitalize;
+    width: 100px;
+
+    &.btn-true {
+      background-color: #DEDEDE;
+      border: 1px solid #DEDEDE;
+    }
+
+    &.btn-false {
+      background-color: #0099CB;
+      border: 1px solid #0099CB;
+    }
+  }
+  .colapse-truste-select{
+    margin: 0px;
+  }
+  .colapse-trustee-header{
+    font-size: 14px;
+    color: #313E47;
+    font-weight: bold;
+  }
+
+  .colapse-header-right-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ant-collapse > .ant-collapse-item > .ant-collapse-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 0px;
+   
+ 
+  }
+  .ant-collapse-borderless > .ant-collapse-item:last-child, .ant-collapse-borderless > .ant-collapse-item:last-child .ant-collapse-header{
+    border-bottom: none;
+  }
+  .ant-collapse-content > .ant-collapse-content-box{
+    padding: 10px 0px 0 25px;
+    
+  }
+
+  .ant-collapse-borderless > .ant-collapse-item {
+    border-bottom: none;
+  } 
+}
+@include mobile{
+  .colapse-header-right-select{
+    text-align: right;
+  }
+  .trusteee-select-head{
+    padding:0 0px 10px !important;
+  }
+  .colapse-sel{
+    margin-right: 0px !important;
+  }
+}
