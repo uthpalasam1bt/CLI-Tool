@@ -41,25 +41,56 @@ const TEMPLATES = {
 
 const copyStepTemplate = async () => {
     console.log(chalk.green('Generate Templates'));
-
+  
     const questions = [
         {
             type: 'input',
-            name: 'folder',
-            message: 'Folder name to generate the template ?',
+            name: 'workflow',
+            message: 'workflow name to generate steps ?',
             validate: value => {
                 if (value && value.length && !/[^a-z]/i.test(value)) {
                     const filePath = `../web/src/containers/schemeOptions/updates/${value}`;
                     if (!fs.existsSync(filePath)) {
-                        return true;
-                    } else {
-                        return 'folder already exist... \n type another name ?';
+                       fs.mkdirSync(filePath)
+                       console.log(chalk.green(`\n ${value} folder has been  created inside ../web/src/containers/schemeOptions/updates `))
                     }
+                    return true
                 } else {
                     return 'enter a valid name ?';
                 }
             }
         },
+        {
+            type: 'input',
+            name: 'folder',
+            message: 'Folder name to generate the template ?',
+            validate: (value,answer) => {
+                if (value && value.length && !/[^a-z]/i.test(value)) {
+                    let rootPath
+                    if(answer && answer.workflow){
+                         rootPath=`../web/src/containers/schemeOptions/updates/${answer.workflow}`
+                    }
+                   
+                    const filePath = `${rootPath}/${value}`;
+                    if(rootPath && fs.existsSync(rootPath)){
+                        if ( !fs.existsSync(filePath)) {
+                            return true;
+                        } else {
+                            return 'folder already exist... \n type another name ?';
+                        }
+                    }else{
+                        console.log(chalk.red("there is no such workflow inside ../web/src/containers/schemeOptions/updates "))
+                        process.exit(-1)
+                    }
+                
+                } else {
+                    return 'enter a valid name ?';
+                }
+            },
+            when:(answer)=>{
+                return answer.workflow
+                 }
+         },
         {
             type: 'list',
             name: 'template',
@@ -105,7 +136,7 @@ const copyStepTemplate = async () => {
     try {
         const answer = await inquirer.prompt(questions);
         if (answer && answer.template && answer.folder) {
-            const destination = `../web/src/containers/schemeOptions/updates/${answer.folder}`;
+            const destination = `../web/src/containers/schemeOptions/updates/${answer.workflow}/${answer.folder}`;
             const source = `../web/src/containers/schemeOptions/stepTemplates/${answer.template.toString().trim()}`;
 
             if (fs.existsSync(source)) {
