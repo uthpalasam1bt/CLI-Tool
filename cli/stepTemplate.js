@@ -5,40 +5,7 @@ const figlet = require("figlet");
 const chalk = require("chalk");
 const inquirer = require("inquirer");
 const fse = require("fs-extra");
-
-const TEMPLATES = {
-  ACTIVATION_DEFAULT: "activationDefault",
-  ACTIVATION_SIMPLE_FORM_FUNCTION: "activationSimpleFormFunction",
-  ACTIVATION_SIMPLE_FORM_JSON: "activationSimpleFormJSON",
-  ACTIVATION_TAB_FORM_FUNCTION: "activationTabFormFunction",
-  ACTIVATION_TAB_FORM_JSON: "activationTabFormJSON",
-  APPROVE_REJECT_DYNAMIC: "approveRejectDynamic",
-  APPROVE_REJECT_SIMPLE_FORM: "approveRejectSimpleForm",
-  APPROVE_REJECT_SINGLE_DOCUMENT: "approveRejectSingleDoc",
-  APPROVE_REJECT_TAB_DOCUMENT: "approveRejectTabDoc",
-  APPROVE_REJECT_TAB_FORM: "approveRejectTabForm",
-  EXECUTION: "execution",
-  PUBLISH_FORM_FUNCTION: "publishFormFunction",
-  PUBLISH_FORM_JSON: "publishFormJSON",
-  PUBLISH_MULTIPLE_DOCUMENT: "publishMultipleDoc",
-  PUBLISH_SINGLE_DOCUMENT: "publishSingleDoc",
-  PUBLISH_UPLOAD_DOC: "publishUploadDoc",
-  SIMPLE_FORM_DATA_CHANGE_DOWNLOAD_JSON: "simpleFormDataChangeDownloadJson",
-  SIMPLE_FORM_DATA_CHANGE_DOWNLOAD_FUNCTION:
-    "simpleFormDataChangeDownloadFunction",
-  SIMPLE_FORM_DATA_DOWNLOAD_FUNCTION: "simpleFormDataDownload",
-  SIMPLE_FORM_DATA_DOWNLOAD_JSON: "simpleFormDataDownloadJson",
-  SIMPLE_FORM_FUNCTION: "simpleFormFunction",
-  SIMPLE_FORM_JSON: "simpleFormJSON",
-  TAB_FORM_DATA_CHANGE_DOWNLOAD_FUNCTION: "TabFormDataChangeDownloadFunction",
-  TAB_FORM_DATA_CHANGE_DOWNLOAD_JSON: "TabFormDataChangeDownloadJson",
-  TAB_FORM_DATA_DOWNLOAD_FUNCTION: "tabFormDataDownloadFunction",
-  TAB_FORM_DATA_DOWNLOAD_JSON: "tabFormDataDownloadJson",
-  TAB_FORM_FUNCTION: "tabFormFunction",
-  TAB_FORM_JSON: "tabFormJSON",
-  UPLOAD_GENERATE_DOCUMENT: "uploadGenerateDocument",
-  UPLOAD_GENERATE_TAB_FORM: "uploadGenerateTabForm",
-};
+const {TEMPLATES}=require('./constants')
 
 const copyStepTemplate = async () => {
   console.log(chalk.green("Generate Templates"));
@@ -144,6 +111,7 @@ const copyStepTemplate = async () => {
   try {
     const answer = await inquirer.prompt(questions);
     if (answer && answer.template && answer.folder) {
+      const stepConfigPath=`../web/src/containers/schemeOptions/updates/stepConfig.js`;
       const destination = `../web/src/containers/schemeOptions/updates/${answer.workflow}/${answer.folder}`;
       const source = `../web/src/containers/schemeOptions/stepTemplates/${answer.template
         .toString()
@@ -159,6 +127,66 @@ const copyStepTemplate = async () => {
               `${answer.template} template has been successfully generated inside the ${destination} folder`
             )
           );
+
+          // generate code 
+                        // Read file
+                        fs.readFile(stepConfigPath, async function read(err, data) {
+                          // Check for errors
+                                       if (err) throw err;
+                      
+                          // Define where and what to insert
+                              if(data){
+                      
+                          let importComponent=`\r\nconst ChangeTrustee = React.lazy(() => retry(() => import('./trustees/chngTrust')));`
+                          let mapComponent = `,\n\t tttt: {
+                              chngTrust: props => <ChangeTrustee {...props} />,
+                              clientApprTrust: props => <ClientApproveTrustee {...props} />,
+                              lgimApprTrust: props => <AdminApproveTrustee {...props} />
+                          }`;
+                      
+                          // Get rest of the file to write after inserted text
+                          var file_content = data.toString();
+                          let topIndex=file_content.indexOf(`/*don't change this line mannully*/`)
+                          
+                          let importPosition=file_content.lastIndexOf(';',topIndex)+1
+                          
+                          let afterImportComponent=file_content.substring(importPosition,file_content.length)
+                      
+                      
+                          // Create buffer
+                         let file = fs.createWriteStream(stepConfigPath, {flags: "r+"} );
+                          file.pos=importPosition
+                          let importComp=Buffer.from(importComponent + afterImportComponent,'utf-8');
+                          const imported= await file.write(importComp)
+                          file.close()
+                      
+                          if(imported){
+                              fs.readFile(stepConfigPath, async function read(err, data) {
+                                  // Check for errors
+                                               if (err) throw err;
+                              
+                                  // Define where and what to insert
+                                      if(data){
+                                          let content=data.toString()
+                                          let bottomIndex=content.indexOf(`/*don't edit after this line mannully or change anything or remove this comment*/`)
+                                          let mappingPosition=content.lastIndexOf('}',bottomIndex)+1
+                                          let afterComponentMap =content.substring(mappingPosition,content.length)
+                          
+                                          file = fs.createWriteStream(stepConfigPath, {flags: "r+"} );
+                                          file.pos =mappingPosition
+                                          let mapComp = Buffer.from(mapComponent + afterComponentMap,'utf-8');
+                                          file.write(mapComp)
+                                          file.close()
+                                      }
+                                  })
+                           
+                          }
+                          
+                         
+                      
+                          }
+                          
+                      });
         }
       } else {
         return console.log(chalk.red(`there is no such template`));
