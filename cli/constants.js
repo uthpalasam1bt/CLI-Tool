@@ -1,5 +1,5 @@
 
-
+const templatePath=`../web/src/containers/schemeOptions/stepTemplates`
 const TEMPLATES = {
     ACTIVATION_DEFAULT: "activationDefault",
     ACTIVATION_SIMPLE_FORM_FUNCTION: "activationSimpleFormFunction",
@@ -35,5 +35,6 @@ const TEMPLATES = {
   };
 
   module.exports={
-      TEMPLATES
+      TEMPLATES,
+      templatePath
   }

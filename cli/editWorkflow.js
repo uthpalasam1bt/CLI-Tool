@@ -5,20 +5,191 @@ const figlet = require("figlet");
 const chalk = require("chalk");
 const inquirer = require("inquirer");
 const fse = require("fs-extra");
+const { getDirectoriesFormThePath, getTemplates } = require("./utility");
+const { templatePath } = require("./constants");
 
-const selectWorkflow=async ()=>{
+
+const generateSteps=(stepsAndTemplates,workflow,existingwf)=>{
+    const stepConfigPath=`../web/src/containers/schemeOptions/updates/stepConfig.js`;
+    const workflowPath=`../web/src/containers/schemeOptions/updates/${workflow}`
+    const rootTemplatePath=templatePath
+    let importComponent=''
+    let mapComponent=existingwf ?``:`,\n\t ${workflow}: { `
+
+    if(stepsAndTemplates && stepsAndTemplates.length){
+    stepsAndTemplates.map((step,index)=>{
+      const destination = `${workflowPath}/${step.stepKey}`;
+      const source = `${rootTemplatePath}/${step.template}`;
+    
+      if (fs.existsSync(source)) {
+             fs.mkdirSync(destination);
+        if (fs.existsSync(destination)) {
+                fse.copySync(source, destination);
+
+               importComponent= importComponent.concat(`\nconst Generated${step.stepKey}Component = React.lazy(() => retry(() => import('./${workflow}/${step.stepKey}')));`)
+               mapComponent= mapComponent.concat(`\n\t\t${step.stepKey}: props => <Generated${step.stepKey}Component {...props} />,`)
+                if(stepsAndTemplates.length-1===index && !existingwf){
+                    mapComponent=  mapComponent.concat(`\n\t}`)
+                }
+            }
+        
+        }
+
+    })
+
+
+        // generate code 
+                        // Read file
+                        fs.readFile(stepConfigPath, async function read(err, data) {
+                            // Check for errors
+                                         if (err) throw err;
+                        
+                            // Define where and what to insert
+                                if(data){
+
+                            // Get rest of the file to write after inserted text
+                            var file_content = data.toString();
+                            let topIndex=file_content.indexOf(`/*don't change this line mannully*/`)
+                            
+                            let importPosition=file_content.lastIndexOf(';',topIndex)+1
+                            
+                            let afterImportComponent=file_content.substring(importPosition,file_content.length)
+                        
+                        
+                            // Create buffer
+                           let file = fs.createWriteStream(stepConfigPath, {flags: "r+"} );
+                            file.pos=importPosition
+                            let importComp=Buffer.from(importComponent + afterImportComponent,'utf-8');
+                            const imported= await file.write(importComp)
+                            file.close()
+                        
+                            if(imported){
+                                fs.readFile(stepConfigPath, async function read(err, data) {
+                                    // Check for errors
+                                                 if (err) throw err;
+                                
+                                    // Define where and what to insert
+                                        if(data){
+
+                                            let mappingPosition
+                                            let afterComponentMap
+                                            let content=data.toString()
+                                            let lines = content.toString().split("\n");
+                                            if(existingwf){
+                                                let exsistingPostion=content.search(new RegExp(` ${workflow}: {`,'i'))
+                                                let exisitingMappingPosition=content.indexOf('{',exsistingPostion)
+                                                mappingPosition=exisitingMappingPosition+1
+                                                afterComponentMap =content.substring(mappingPosition,content.length)
+                                                console.log(exisitingMappingPosition,afterComponentMap)
+
+                                            }else{
+                                                let bottomIndex=content.indexOf(`/*don't edit after this line mannully or change anything or remove this comment*/`)
+                                                mappingPosition=content.lastIndexOf('}',bottomIndex)+1
+                                                afterComponentMap =content.substring(mappingPosition,content.length)
+                                            }
+                                           
+                                          
+                            
+                                            file = fs.createWriteStream(stepConfigPath, {flags: "r+"} );
+                                            file.pos =mappingPosition
+                                            let mapComp = Buffer.from(mapComponent + afterComponentMap,'utf-8');
+                                            file.write(mapComp)
+                                            file.close()
+                                        }
+                                    })
+                             
+                            }
+                            
+                           
+                        
+                            }
+                            
+                        });
+//
+
+
+    }
+
+
 
 
 }
+const addSteps=async (index,addedSteps,workflow)=>{
+    const workflowPath=`../web/src/containers/schemeOptions/updates/${workflow}`
+    const steps=[...getDirectoriesFormThePath(workflowPath)]
+    if(addedSteps && addedSteps.length){
+        addedSteps.map(step=>{
+            steps.push(step.stepKey)
+        })
+    }
+    const templates=getTemplates()
+  
+     const questions=[{
+         type:'input',
+         name:`stepKey`,
+         message:`Enter the step ${index ? index :''} key ?`,
+         validate:(value)=>{
+             if(value && value.length && !/[^a-z]/i.test(value)){
+                 if(steps.includes(value)){
+                     return "can't create a step with this key."
+                 }else{
+                    return true
+                 }
+                 
+             }else{
+                 return 'enter a valid name'
+             }
+
+         }
+         
+     },
+     {
+         type:'list',
+         name:'template',
+         message:`select an template for the step ${index ? index :''} ?`,
+         choices:[...templates],
+         when:(answer)=>{
+             return answer.stepKey
+         }
+     }
+    ]
+
+    if(templates){
+        return await inquirer.prompt(questions)
+    }
+
+}
+const confirmPrompt= async (steps)=>{
+    
+   const confirmSteps= steps.map((step,index)=>{
+        return `step key - ${step.stepKey} => template - ${step.template}`
+    })
+    let message
+    if(confirmSteps && confirmSteps.length){
+        message=confirmSteps.join('\n')
+    }
+
+    const confirmPrompt=[
+        {
+            type:'confirm',
+            name:'confirm',
+            message:`${message}`,
+            default:true
+
+
+        }
+    ]
+
+    if(steps && steps.length){
+        console.log(chalk.blue("confirm entered step details:"))
+        return await inquirer.prompt(confirmPrompt)
+    }
+}
 
 const editExistingWorkflow= async ()=>{
-   
-    const rootPath=`../web/src/containers/schemeOptions/updates`
-    const files=await fs.promises.readdir(rootPath)
-    const existingWf=files.filter((file)=>{
-        const filepath=path.join(rootPath,file)
-        return fs.lstatSync(filepath).isDirectory() 
-    })
+   const stepsAndTemplates=[]
+   const rootpath=`../web/src/containers/schemeOptions/updates`
+    const existingWf=getDirectoriesFormThePath(rootpath)
     
     if(existingWf && existingWf.length){
         const selectWorkflowPrompt=[
@@ -49,11 +220,11 @@ const editExistingWorkflow= async ()=>{
             if(answers.option==='add new steps'){
                 const stepPrompt=[
                     {
-                        type:'input',
+                        type:'number',
                         name:'stepCount',
                         message:'How many step do you want to add ?',
                         validate:(value)=>{
-                            if(value && !isNaN(value) && value >0){
+                            if(value && value >0){  
                                 return true
                             }else{
                                 return "enter a valid number (min=1)"
@@ -66,8 +237,26 @@ const editExistingWorkflow= async ()=>{
 
             if(count.stepCount){
                 for(let i=0;i<count.stepCount;i++){
-                    console.log("steps")
+                    const answer=await addSteps(i+1,stepsAndTemplates,answers.workflow)
+                    if(answer){
+                        stepsAndTemplates.push(answer)
+                    }
                 }
+
+               
+            }
+
+            if(stepsAndTemplates.length){
+               const confirmAnswer =await  confirmPrompt(stepsAndTemplates)
+
+               if(confirmAnswer && confirmAnswer.confirm){ 
+
+                    generateSteps(stepsAndTemplates,answers.workflow,true)
+                    
+               }else{
+                   editExistingWorkflow()
+               }
+
             }
             }
         }
@@ -86,5 +275,8 @@ const editExistingWorkflow= async ()=>{
 
 
 module.exports={
-    editExistingWorkflow
+    editExistingWorkflow,
+    addSteps,
+    generateSteps,
+    confirmPrompt
 }

@@ -7,6 +7,7 @@ const chalk = require('chalk');
 const inquirer = require('inquirer');
 const { copyStepTemplate } = require('./stepTemplate');
 const { editExistingWorkflow } = require('./editWorkflow');
+const { addWorkflow } = require('./addWorkflow');
 
 const OPTIONS = {
     CREATE_WORKFLOW: 'Create a new workflow',
@@ -35,7 +36,7 @@ const run = async () => {
         if (answer && answer.options) {
             switch (answer.options) {
                 case OPTIONS.CREATE_WORKFLOW:
-                    copyStepTemplate();
+                    addWorkflow()
                     break;
                 case OPTIONS.EDIT_WORKFLOW:
                     editExistingWorkflow()
