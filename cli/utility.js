@@ -11,13 +11,17 @@ const directoryExists = (filePath) => {
 };
 
 const getDirectoriesFormThePath = (filePath) => {
-  const files = fs.readdirSync(filePath);
-  const directories = files.filter((file) => {
-    const filepath = path.join(filePath, file);
-    return fs.lstatSync(filepath).isDirectory();
-  });
+  if (directoryExists(filePath)) {
+    const files = fs.readdirSync(filePath);
+    const directories = files.filter((file) => {
+      const filepath = path.join(filePath, file);
+      return fs.lstatSync(filepath).isDirectory();
+    });
 
-  return directories;
+    return directories;
+  } else {
+    return [];
+  }
 };
 
 const getTemplates = () => {
