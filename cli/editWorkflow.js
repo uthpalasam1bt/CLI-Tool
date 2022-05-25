@@ -11,8 +11,9 @@ const {
   deleteDirectoryFiles,
 } = require("./utility");
 const { templatePath } = require("./constants");
+const { Worker } = require("cluster");
 
-const generateSteps = (stepsAndTemplates, workflow, existingwf) => {
+const generateSteps = (stepsAndTemplates, workflow, existingwf,stepExist) => {
   const stepConfigPath = `../web/src/containers/schemeOptions/updates/stepConfig.js`;
   const data = fs.readFileSync(stepConfigPath);
   let workflowExist = data
@@ -29,7 +30,7 @@ const generateSteps = (stepsAndTemplates, workflow, existingwf) => {
       const source = `${rootTemplatePath}/${step.template}`;
 
       if (fs.existsSync(source)) {
-        fs.mkdirSync(destination);
+          if(!stepExist) fs.mkdirSync(destination);
         if (fs.existsSync(destination)) {
           fse.copySync(source, destination);
 
@@ -305,13 +306,26 @@ const editExisitingStep = async (workflow) => {
       if (template && template.confirm) {
         const stepPath = `../web/src/containers/schemeOptions/updates/${workflow}/${answers.step}`;
         const source = `${templatePath}/${template.template}`;
+        const stepConfigPath = `../web/src/containers/schemeOptions/updates/stepConfig.js`;
 
         deleteDirectoryFiles(stepPath);
 
         if (fs.existsSync(source)) {
           if (fs.existsSync(stepPath)) {
             fse.copySync(source, stepPath);
-            console.log(chalk.green("success"));
+
+            const data = fs.readFileSync(stepConfigPath);
+            let stepExist = data
+              .toString()
+              .search(new RegExp(`${answers.step}:`, "i"));
+            if(stepExist>0){
+                console.log(chalk.green("success"));
+
+            }else{
+                let stepTemplate=[{stepKey:answers.step,template:template.template}]
+                generateSteps(stepTemplate,workflow,false,true)
+                
+            }
           }
         }
       } else {
