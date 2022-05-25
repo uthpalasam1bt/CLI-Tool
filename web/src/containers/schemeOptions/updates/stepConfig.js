@@ -183,6 +183,7 @@ const ChangeTrustee = React.lazy(() => retry(() => import('./trustees/chngTrust'
 const ClientApproveTrustee = React.lazy(() => retry(() => import('./trustees/clientApprTrust')));
 const AdminApproveTrustee = React.lazy(() => retry(() => import('./trustees/lgimApprTrust')));
 
+/*don't change this line mannully*/
 const StepConfig = {
     registration: {
         reqip: props => <REGreqip {...props} />,
@@ -367,6 +368,9 @@ const StepConfig = {
         clientApprTrust: props => <ClientApproveTrustee {...props} />,
         lgimApprTrust: props => <AdminApproveTrustee {...props} />
     }
+
+/*don't edit after this line mannully or change anything or remove this comment*/
+
 };
 
 export default StepConfig;

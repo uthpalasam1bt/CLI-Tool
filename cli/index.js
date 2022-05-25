@@ -6,10 +6,12 @@ const figlet = require('figlet');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const { copyStepTemplate } = require('./stepTemplate');
+const { editExistingWorkflow } = require('./editWorkflow');
+const { addWorkflow } = require('./addWorkflow');
 
 const OPTIONS = {
-    GENERATE_STEP_TEMPLATE: 'Generate a step template',
-    GENERATE_DOC: 'Generate a Document'
+    CREATE_WORKFLOW: 'Create a new workflow',
+    EDIT_WORKFLOW: 'Edit an exisitig workflow'
 };
 
 console.log(chalk.gray(figlet.textSync('Nav Guide CLI Tool', { horizontalLayout: 'full' })));
@@ -20,8 +22,8 @@ const cliOptions = () => {
             type: 'list',
             name: 'options',
             message: 'select an option :',
-            choices: [OPTIONS.GENERATE_STEP_TEMPLATE, OPTIONS.GENERATE_DOC],
-            default: 'Generate a step template'
+            choices: [OPTIONS.CREATE_WORKFLOW, OPTIONS.EDIT_WORKFLOW],
+            default: OPTIONS.CREATE_WORKFLOW
         }
     ];
     return inquirer.prompt(questions);
@@ -33,13 +35,13 @@ const run = async () => {
 
         if (answer && answer.options) {
             switch (answer.options) {
-                case OPTIONS.GENERATE_STEP_TEMPLATE:
-                    copyStepTemplate();
+                case OPTIONS.CREATE_WORKFLOW:
+                    addWorkflow()
                     break;
-                case OPTIONS.GENERATE_DOC:
+                case OPTIONS.EDIT_WORKFLOW:
+                    editExistingWorkflow()
                     break;
                 default:
-                    process.exit(-1);
                     break;
             }
         }
