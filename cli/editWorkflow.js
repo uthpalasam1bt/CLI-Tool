@@ -128,9 +128,10 @@ const generateSteps = (stepsAndTemplates, workflow, existingwf) => {
     //
   }
 };
-const addSteps = async (index, addedSteps, workflow) => {
+const addSteps = async (index, addedSteps, workflow, stepCount) => {
   const workflowPath = `../web/src/containers/schemeOptions/updates/${workflow}`;
   const steps = [...getDirectoriesFormThePath(workflowPath)];
+
   if (addedSteps && addedSteps.length) {
     addedSteps.map((step) => {
       steps.push(step.stepKey);
@@ -142,7 +143,9 @@ const addSteps = async (index, addedSteps, workflow) => {
     {
       type: "input",
       name: `stepKey`,
-      message: `Enter the step ${index ? index : ""} key ?`,
+      message: `Enter the step ${
+        index ? (stepCount == 1 ? "" : index + " ") : ""
+      }key ?`,
       validate: (value) => {
         if (value && value.length && !/[^a-z]/i.test(value)) {
           if (steps.includes(value)) {
@@ -158,7 +161,9 @@ const addSteps = async (index, addedSteps, workflow) => {
     {
       type: "list",
       name: "template",
-      message: `select a template for the step ${index ? index : ""} ?`,
+      message: `select a template for the step ${
+        index ? (stepCount == 1 ? "" : index + " ") : ""
+      }?`,
       choices: [...templates],
       when: (answer) => {
         return answer.stepKey;
@@ -243,7 +248,8 @@ const editExistingWorkflow = async () => {
             const answer = await addSteps(
               i + 1,
               stepsAndTemplates,
-              answers.workflow
+              answers.workflow,
+              count.stepCount
             );
             if (answer) {
               stepsAndTemplates.push(answer);
