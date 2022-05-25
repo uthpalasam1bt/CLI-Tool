@@ -51,18 +51,12 @@ const addWorkflow = async () => {
     const answers = await inquirer.prompt(addWorkflowPrompt);
 
     if (answers && answers.workflow && answers.stepCount) {
-      //   if (answers.workflow) {
-      //     const path = `../web/src/containers/schemeOptions/updates/${answers.workflow}`;
-      //     fs.mkdirSync(path);
-      //     console.log(
-      //       chalk.green(`workflow ${answers.workflow} has been created ${path}`)
-      //     );
-      //   }
       for (let i = 0; i < answers.stepCount; i++) {
         const answer = await addSteps(
           i + 1,
           stepsAndTemplates,
-          answers.workflow
+          answers.workflow,
+          answers.stepCount
         );
         if (answer) {
           stepsAndTemplates.push(answer);
