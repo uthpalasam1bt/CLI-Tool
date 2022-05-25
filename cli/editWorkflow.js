@@ -10,11 +10,14 @@ const { templatePath } = require("./constants");
 
 
 const generateSteps=(stepsAndTemplates,workflow,existingwf)=>{
+    
     const stepConfigPath=`../web/src/containers/schemeOptions/updates/stepConfig.js`;
+    const data =fs.readFileSync(stepConfigPath)
+    let workflowExist=data.toString().search(new RegExp(` ${workflow}: {`,'i'))
     const workflowPath=`../web/src/containers/schemeOptions/updates/${workflow}`
     const rootTemplatePath=templatePath
     let importComponent=''
-    let mapComponent=existingwf ?``:`,\n\t ${workflow}: { `
+    let mapComponent=workflowExist > 0 ?``:`,\n\t ${workflow}: { `
 
     if(stepsAndTemplates && stepsAndTemplates.length){
     stepsAndTemplates.map((step,index)=>{
@@ -28,7 +31,7 @@ const generateSteps=(stepsAndTemplates,workflow,existingwf)=>{
 
                importComponent= importComponent.concat(`\nconst Generated${step.stepKey}Component = React.lazy(() => retry(() => import('./${workflow}/${step.stepKey}')));`)
                mapComponent= mapComponent.concat(`\n\t\t${step.stepKey}: props => <Generated${step.stepKey}Component {...props} />,`)
-                if(stepsAndTemplates.length-1===index && !existingwf){
+                if(stepsAndTemplates.length-1===index && workflowExist < 0 ){
                     mapComponent=  mapComponent.concat(`\n\t}`)
                 }
             }
@@ -70,17 +73,16 @@ const generateSteps=(stepsAndTemplates,workflow,existingwf)=>{
                                 
                                     // Define where and what to insert
                                         if(data){
-
+                                            
                                             let mappingPosition
                                             let afterComponentMap
                                             let content=data.toString()
                                             let lines = content.toString().split("\n");
-                                            if(existingwf){
+                                            if(workflowExist > 0 ){
                                                 let exsistingPostion=content.search(new RegExp(` ${workflow}: {`,'i'))
                                                 let exisitingMappingPosition=content.indexOf('{',exsistingPostion)
                                                 mappingPosition=exisitingMappingPosition+1
                                                 afterComponentMap =content.substring(mappingPosition,content.length)
-                                                console.log(exisitingMappingPosition,afterComponentMap)
 
                                             }else{
                                                 let bottomIndex=content.indexOf(`/*don't edit after this line mannully or change anything or remove this comment*/`)
@@ -258,8 +260,12 @@ const editExistingWorkflow= async ()=>{
                }
 
             }
-            }
         }
+
+        if(answers.option==='edit an existing step'){
+                editExisitingStep(answers.workflow)
+        }
+    }
     }else{
         return console.log(chalk.red("there is no worflows to edit"))
     }
@@ -267,6 +273,13 @@ const editExistingWorkflow= async ()=>{
  
   
 
+}
+
+
+const editExisitingStep=(workflow)=>{
+    const workflowPath=`../web/src/containers/schemeOptions/updates/${workflow}`
+    const exisitingSteps=getDirectoriesFormThePath(workflowPath)
+    
 }
 
 
