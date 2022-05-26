@@ -17,7 +17,7 @@ const addWorkflow = async () => {
     {
       type: "input",
       name: "workflow",
-      message: "Enter a workflow Key to continue ?",
+      message: "Please enter a workflow key to continue the process ?",
       validate: (value) => {
         if (value && value.length && !/[^a-z]/i.test(value)) {
           if (exisitingWorkflows.includes(value)) {
@@ -33,7 +33,7 @@ const addWorkflow = async () => {
     {
       type: "number",
       name: "stepCount",
-      message: "How many step do you want to add ?",
+      message: "How many steps would you like to include ?",
       validate: (value) => {
         if (value && value > 0) {
           return true;
