@@ -23,7 +23,7 @@ const cliOptions = () => {
     {
       type: "list",
       name: "options",
-      message: "select an option :",
+      message: "Please select one of the options  :",
       choices: [OPTIONS.CREATE_WORKFLOW, OPTIONS.EDIT_WORKFLOW],
       default: OPTIONS.CREATE_WORKFLOW,
     },

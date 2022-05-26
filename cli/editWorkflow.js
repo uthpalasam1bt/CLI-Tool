@@ -144,7 +144,7 @@ const addSteps = async (index, addedSteps, workflow, stepCount) => {
     {
       type: "input",
       name: `stepKey`,
-      message: `Enter the step ${
+      message: `Please enter a valid step ${
         index ? (stepCount == 1 ? "" : index + " ") : ""
       }key ?`,
       validate: (value) => {
@@ -162,7 +162,7 @@ const addSteps = async (index, addedSteps, workflow, stepCount) => {
     {
       type: "list",
       name: "template",
-      message: `select a template for the step ${
+      message: `Please select a template to generate the step ${
         index ? (stepCount == 1 ? "" : index + " ") : ""
       }?`,
       choices: [...templates],
@@ -195,7 +195,7 @@ const confirmPrompt = async (steps) => {
   ];
 
   if (steps && steps.length) {
-    console.log(chalk.blue("confirm entered step details:"));
+    console.log(chalk.blue("Please confirm entered step details:"));
     return await inquirer.prompt(confirmPrompt);
   }
 };
@@ -210,13 +210,13 @@ const editExistingWorkflow = async () => {
       {
         type: "list",
         name: "workflow",
-        message: "select an workflow to continue :",
+        message: "Please select a workflow to continue the process :",
         choices: [...existingWf],
       },
       {
         type: "list",
         name: "option",
-        message: "select an option",
+        message: "Please select one of the options ",
         choices: ["add new steps", "edit an existing step"],
         when: (answer) => {
           return answer.workflow;
@@ -232,7 +232,7 @@ const editExistingWorkflow = async () => {
           {
             type: "number",
             name: "stepCount",
-            message: "How many step do you want to add ?",
+            message: "How many steps would you like to include ?",
             validate: (value) => {
               if (value && value > 0) {
                 return true;
@@ -287,13 +287,13 @@ const editExisitingStep = async (workflow) => {
       {
         type: "list",
         name: "step",
-        message: `select a step to continue from ${workflow} workflow :`,
+        message: `Please select a step from ${workflow} workflow :`,
         choices: [...exisitingSteps],
       },
       {
         type: "confirm",
         name: "confirm",
-        message: "Are you sure want to edit this step ?",
+        message: "Are you sure you want to edit this step ?",
         default: true,
       },
     ];
@@ -345,13 +345,13 @@ const editStepTemplate = async () => {
     {
       type: "list",
       name: "template",
-      message: "select a template for the step :",
+      message: "Please select a template to replace the existing template :",
       choices: [...templates],
     },
     {
       type: "confirm",
       name: "confirm",
-      message: "Are you sure want to replace the existing template ?",
+      message: "Are you sure you want to replace the existing template ?",
       default: true,
     },
   ];
